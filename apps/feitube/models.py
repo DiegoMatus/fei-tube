@@ -42,17 +42,24 @@ class Profile(models.Model):
 
 
 #############################################################################################
+def get_file_path_videos(instance, filename):
+    #folder = filename.split('.')
+    #path = "%s.%s" % ('videos/', folder[0])
+    return os.path.join('videos/', filename)
+
 class Video(models.Model):
     '''Representación de los videos mostrados en el sitio'''
     title = models.CharField('Título', max_length=255)
-    description = models.TextField ('Descripción')
-    views = models.IntegerField ('Visitas')
     tags = models.CharField('Tags', max_length=255)
+    description = models.TextField ('Descripción')
+    path = models.FileField(upload_to=get_file_path_videos)
+    views = models.IntegerField ('Visitas', blank=True, null=True)
     uploaded = models.DateTimeField(auto_now_add=True)
-    favs_count = models.IntegerField ('Cantidad de favoritos')
-    profile = models.ForeignKey(Profile, verbose_name='Usuario', related_name='videos')
-    favs = models.ManyToManyField(Profile, verbose_name='Favoritos', related_name='videos_fav')
-    rates = models.ManyToManyField(Profile, verbose_name='Calificaciones', through="Rate", through_fields=('video', 'profile'), related_name='videos_rate')
+    favs_count = models.IntegerField ('Cantidad de favoritos', blank=True, null=True)
+    profile = models.ForeignKey(Profile, verbose_name='Usuario', related_name='videos', blank=True, null=True)
+    favs = models.ManyToManyField(Profile, verbose_name='Favoritos', related_name='videos_fav', blank=True)
+    rates = models.ManyToManyField(Profile, verbose_name='Calificaciones', through="Rate", 
+    						through_fields=('video', 'profile'), related_name='videos_rate')
     #image = models.FileField(upload_to=get_file_path_universities)
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
 

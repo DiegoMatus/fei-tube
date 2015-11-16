@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static from static %}
+
+{% block style %}
+	<link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<section class="main row orange lighten-2">
+		<div class="col s12 l9 offset-l3">
+			<video id="my-video" class="video-js responsive-video" controls preload="auto" width="640" height="264"
+			poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+				<source src="{{ video.path.url }}" type='video/mp4'>
+				<source src="{{ video.path.url }}" type='video/webm'>
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript, and consider upgrading to a web browser that
+				  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+	<!--<video controls>
+		<source src="../../../media/videos/crepas.webm" type='video/webm; codecs="vp8, vorbis"'>
+		<source src="../../../media/videos/crepas.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		<source src="../../../media/videos/crepas.ogv" type='video/ogg; codecs="theora, vorbis"'>
+	</video>-->
+		</div>
+	</section>
+{% endblock %}
+
+{% block scripts %}
+	<script src="http://vjs.zencdn.net/5.0.2/video.js"></script>}
+{% endblock %}

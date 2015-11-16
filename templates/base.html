@@ -34,7 +34,7 @@
                 </form>
               </li>
               {% if user.is_authenticated %}
-                <li class="hide-on-small-only"><a class="modal-trigger" href="#modal1"><i class="material-icons right">trending_up</i>Upload</a></li>
+                <li class="hide-on-small-only"><a class="" href="{% url "upload" %}"><i class="material-icons right">trending_up</i>Upload</a></li>
                 <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">new_releases</i></a></li>
                 <li class="hide-on-small-only"><a href="mobile.html"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
@@ -90,11 +90,11 @@
 
     <aside id="sidebar">
       <ul class="side-nav fixed grey darken-2" id="mobile-demo">
-        <li class="orange lighten-2"><a href="#!" class="grey-text text-darken-2">Feitube</a></li>
+        <li class="orange lighten-2"><a href="{% url "index" %}" class="grey-text text-darken-2">Feitube</a></li>
         <div class="sidebar-header">
           {% if user.is_authenticated %}
             <figure class="sidebar-image">
-                  <img src="static/img/20.png" alt="" class="circle responsive-img"/>
+                  <img src="{% static "img/20.png" %}" alt="" class="circle responsive-img"/>
                   <figcaption><a href="#" class="orange-text text-lighten-2 center-align">CubeDiRubik</a></figcaption>
             </figure>
             <div class="row network">
@@ -103,8 +103,8 @@
                 <div class="col s3"><a class="white-text" href="#"><i class="fa fa-instagram fa-lg"></i></a></div>
                 <div class="col s3"><a class="white-text" href="#"><i class="fa fa-google-plus fa-lg"></i></a></div>
             </div>
-            <li><a href="#!" class="white-text">Home</a></li>
-            <li><a href="#modal1" class="white-text modal-trigger">Upload</a></li>
+            <li><a href="{% url "index" %}" class="white-text">Home</a></li>
+            <li><a href="{% url "upload" %}" class="white-text">Upload</a></li>
             <li><a href="#!" class="white-text">My videos</a></li>
             <li><a href="#!" class="white-text">Favorites</a></li>
             <li><a href="#!" class="white-text">Playlist</a></li>
@@ -119,7 +119,7 @@
               <a class="waves-effect waves-light btn col s4 offset-s2" href="#" >Signup</a>
               <a class="waves-effect waves-light btn col s4 offset-s1" href="#" >Login</a>
             </div>
-            <li><a href="#!" class="white-text">Home</a></li>
+            <li><a href="{% url "index" %}" class="white-text">Home</a></li>
           {% endif %}
         </div>
       </ul>
