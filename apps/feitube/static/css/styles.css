@@ -2,17 +2,33 @@ footer{
 	padding-left: 240px;
 }
 
-/*a:focus, a:hover {
-    color: #04BFFE;
-}
-
-a {
-    color: #04B3AE;
-}*/
 
 .main {
-	margin: 1%;
+	margin: 1% 0;
 }
+
+
+/*.video_fields {
+	height: 10px;
+}
+
+#vid-box{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#vid-box video{
+	width: 100%;
+	height: 100%;
+}
+
+#stream-info{
+	position: absolute;
+	bottom: 3vh;
+	right: 5vw;
+}*/
+
 
 @media only screen and (max-width : 992px) {
 	header, footer {

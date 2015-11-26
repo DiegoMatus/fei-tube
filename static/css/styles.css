@@ -1,0 +1,23 @@
+footer{
+	padding-left: 240px;
+}
+
+/*a:focus, a:hover {
+    color: #04BFFE;
+}
+
+a {
+    color: #04B3AE;
+}*/
+
+
+.main {
+	margin: 1% 0;
+}
+
+@media only screen and (max-width : 992px) {
+	header, footer {
+  		padding-left: 0;
+	}
+}
+    

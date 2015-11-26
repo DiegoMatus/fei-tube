@@ -6,26 +6,83 @@
 {% endblock %}
 
 {% block content %}
-	<section class="main row orange lighten-2">
-		<div class="col s12 l9 offset-l3">
-			<video id="my-video" class="video-js responsive-video" controls preload="auto" width="640" height="264"
-			poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-				<source src="{{ video.path.url }}" type='video/mp4'>
-				<source src="{{ video.path.url }}" type='video/webm'>
-				<p class="vjs-no-js">
-				  To view this video please enable JavaScript, and consider upgrading to a web browser that
-				  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-				</p>
-			</video>
-	<!--<video controls>
-		<source src="../../../media/videos/crepas.webm" type='video/webm; codecs="vp8, vorbis"'>
-		<source src="../../../media/videos/crepas.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-		<source src="../../../media/videos/crepas.ogv" type='video/ogg; codecs="theora, vorbis"'>
-	</video>-->
+		<div class="col s8 m6 offset-m2 l5 offset-l3">
+			<div id="video-container" name="{{ video.slug }}" class="row">
+				<video id="my-video" height="320px" width="auto" class="col s12  video-js responsive-video" controls preload="auto" data-setup="{}">
+					<source src="{{ video.generic_path }}.mp4" type='video/mp4'>
+					<source src="{{ video.generic_path }}.webm" type='video/webm'>
+					<source src="{{ video.generic_path }}.ogv" type='video/ogg'>
+					<p class="vjs-no-js">
+					  Activa Javascript y/o considera actualizar a un navegador que
+					  <a href="http://videojs.com/html5-video-support/" target="_blank">soporte
+					  video de HTML5</a>
+					</p>
+				</video>
+			</div>
+			<div class="row">
+				<h5 class="col s12 grey-text text-darken-4">{{ video.title }}</h5>
+				<div class="col s12">
+					<div class="row">
+						<img class="col s4 m2" src="{{ video.profile.profile_picture.url }}" alt="">
+						<div class="col s8 m10">						
+								<p>Por <a href="#" id="profile">{{ video.profile.user.get_username }}</a></p>
+								{% if video.views == 1 %}
+									<p class="">{{ video.views }} Visita</p>
+								{% else %}
+									<p class="">{{ video.views }} Visitas</p>
+								{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="divider"></div>
+			<div class="row section">
+			    <form id="comment_form" class="col s12" method="POST">{% csrf_token %}
+					<div class="row"> 
+						  <img class="col s2 responsive-img circle" src="{{ video.profile.profile_picture.url }}" alt="ggg">   	
+						<div class="input-field col s10">
+						  <textarea id="comment_body" name="comment_body" class="materialize-textarea"></textarea>
+						  <label for="textarea1">Comment</label>
+						</div>
+					</div>
+					<div class="row right">
+						<div class="col s2">
+						  <button class="btn waves-effect waves-light" type="submit" name="action">Publicar
+						    <i class="material-icons right">send</i>
+						  </button>
+						</div>
+					</div>
+			    </form>
+			</div>
+			<div class="row">
+				<div class="divider"></div>
+				<div class="col s12">
+					<div class="row">
+						<p class="col s12">{{ video.uploaded }}</p>
+						<p class="col s12">{{ video.description }}</p>
+					</div>
+				</div>
+			</div>			
+			<div class="divider"></div>
+			<div class="row">
+				<ul id="messages" class="col s12">
+				{% for comment in comments %}
+					<li class="row">					
+						<img class="col s4 m2 responsive-img circle" src="{{ comment.profile.profile_picture.url }}" alt="">
+						<div class="col s8 m10">
+							<div class="row">
+								<p class="col s4">{{ comment.profile.user.get_username }}</p>
+								<p class="col s8">{{ comment.published }}</p>
+								<p class="col s8 m10">{{ comment.comment }}</p>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
 		</div>
-	</section>
 {% endblock %}
 
 {% block scripts %}
-	<script src="http://vjs.zencdn.net/5.0.2/video.js"></script>}
+	<script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
 {% endblock %}

@@ -1,0 +1,2088 @@
+[2015-11-23 03:41:45,615: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[c75c2323-164b-4323-82f4-eefc9ef44bd3]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x96bb20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatogatito/gatogatito.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libvpx @ 0x973cc0] v1.3.0
+Output #0, webm, to 'media/videos/gatogatito/gatogatito.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libvpx)
+  Stream #0:0 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    7 fps=  5 q=0.0 size=       4kB time=0.20 bitrate= 177.4kbits/s    frame=    9 fps=  4 q=0.0 size=      36kB time=0.21 bitrate=1404.8kbits/s    frame=   15 fps=  5 q=0.0 size=      42kB time=0.48 bitrate= 705.2kbits/s    frame=   19 fps=  6 q=0.0 size=      42kB time=0.58 bitrate= 584.2kbits/s    frame=   23 fps=  6 q=0.0 size=      42kB time=0.73 bitrate= 464.7kbits/s    frame=   28 fps=  6 q=0.0 size=      42kB time=0.90 bitrate= 377.2kbits/s    frame=   31 fps=  6 q=0.0 size=      69kB time=1.03 bitrate= 547.9kbits/s    frame=   35 fps=  6 q=0.0 size=      81kB time=1.18 bitrate= 560.4kbits/s    frame=   39 fps=  6 q=0.0 size=      90kB time=1.32 bitrate= 557.9kbits/s    frame=   43 fps=  6 q=0.0 size=     100kB time=1.43 bitrate= 575.7kbits/s    frame=   48 fps=  6 q=0.0 size=     100kB time=1.57 bitrate= 522.6kbits/s    frame=   53 fps=  6 q=0.0 size=     100kB time=1.72 bitrate= 476.8kbits/s    frame=   58 fps=  6 q=0.0 size=     100kB time=1.92 bitrate= 427.6kbits/s    frame=   63 fps=  7 q=0.0 size=     100kB time=2.09 bitrate= 392.9kbits/s    frame=   68 fps=  7 q=0.0 size=     100kB time=2.22 bitrate= 370.4kbits/s    frame=   72 fps=  7 q=0.0 size=     100kB time=2.39 bitrate= 344.1kbits/s    frame=   74 fps=  7 q=0.0 size=     132kB time=2.48 bitrate= 437.3kbits/s    frame=   78 fps=  7 q=0.0 size=     133kB time=2.62 bitrate= 414.4kbits/s    frame=   82 fps=  7 q=0.0 size=     133kB time=2.79 bitrate= 389.9kbits/s    frame=   85 fps=  6 q=0.0 size=     133kB time=2.91 bitrate= 373.9kbits/s    frame=   89 fps=  6 q=0.0 size=     158kB time=3.09 bitrate= 418.3kbits/s    frame=   93 fps=  6 q=0.0 size=     158kB time=3.18 bitrate= 406.7kbits/s    frame=   96 fps=  6 q=0.0 size=     158kB time=3.26 bitrate= 396.5kbits/s    frame=  100 fps=  6 q=0.0 size=     190kB time=3.36 bitrate= 462.7kbits/s    frame=  105 fps=  6 q=0.0 size=     190kB time=3.57 bitrate= 435.6kbits/s    frame=  109 fps=  6 q=0.0 size=     190kB time=3.67 bitrate= 423.8kbits/s    frame=  113 fps=  6 q=0.0 size=     190kB time=3.80 bitrate= 409.3kbits/s    frame=  117 fps=  6 q=0.0 size=     190kB time=4.00 bitrate= 388.6kbits/s    frame=  121 fps=  6 q=0.0 size=     222kB time=4.09 bitrate= 443.6kbits/s    frame=  125 fps=  6 q=0.0 size=     222kB time=4.23 bitrate= 429.2kbits/s    frame=  129 fps=  6 q=0.0 size=     222kB time=4.37 bitrate= 415.4kbits/s    frame=  133 fps=  6 q=0.0 size=     222kB time=4.50 bitrate= 403.6kbits/s    frame=  137 fps=  6 q=0.0 size=     222kB time=4.63 bitrate= 392.4kbits/s    frame=  141 fps=  6 q=0.0 size=     222kB time=4.76 bitrate= 381.9kbits/s    frame=  143 fps=  6 q=0.0 size=     222kB time=4.84 bitrate= 375.1kbits/s    frame=  148 fps=  6 q=0.0 size=     259kB time=5.04 bitrate= 420.5kbits/s    frame=  152 fps=  6 q=0.0 size=     259kB time=5.12 bitrate= 414.3kbits/s    frame=  158 fps=  6 q=0.0 size=     259kB time=5.36 bitrate= 395.3kbits/s    frame=  162 fps=  6 q=0.0 size=     259kB time=5.46 bitrate= 388.0kbits/s    frame=  168 fps=  6 q=0.0 size=     259kB time=5.68 bitrate= 373.3kbits/s    frame=  173 fps=  6 q=0.0 size=     259kB time=5.83 bitrate= 363.8kbits/s    frame=  179 fps=  7 q=0.0 size=     291kB time=6.02 bitrate= 395.7kbits/s    frame=  184 fps=  7 q=0.0 size=     291kB time=6.19 bitrate= 384.8kbits/s    frame=  189 fps=  7 q=0.0 size=     291kB time=6.36 bitrate= 374.5kbits/s    frame=  194 fps=  7 q=0.0 size=     291kB time=6.58 bitrate= 361.7kbits/s    frame=  201 fps=  7 q=0.0 size=     291kB time=6.69 bitrate= 356.1kbits/s    frame=  201 fps=  7 q=0.0 Lsize=     326kB time=6.72 bitrate= 397.2kbits/s    
+video:236kB audio:79kB global headers:4kB muxing overhead 2.249796%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x222cb20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatogatito/gatogatito.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[flac @ 0x2234240] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/gatogatito/gatogatito.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 28.92 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libtheora)
+  Stream #0:0 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    8 fps=  0 q=0.0 size=       0kB time=0.27 bitrate=   4.4kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=0.56 bitrate=   2.1kbits/s    frame=   25 fps= 12 q=0.0 size=       0kB time=0.85 bitrate=   1.4kbits/s    frame=   31 fps= 11 q=0.0 size=       0kB time=1.07 bitrate=   1.1kbits/s    frame=   38 fps= 11 q=0.0 size=       0kB time=1.31 bitrate=   0.9kbits/s    frame=   44 fps= 11 q=0.0 size=       0kB time=1.52 bitrate=   0.8kbits/s    frame=   50 fps= 11 q=0.0 size=      67kB time=1.73 bitrate= 315.2kbits/s    frame=   57 fps= 12 q=0.0 size=     130kB time=1.97 bitrate= 539.1kbits/s    frame=   63 fps= 12 q=0.0 size=     130kB time=2.18 bitrate= 487.7kbits/s    frame=   70 fps= 12 q=0.0 size=     130kB time=2.42 bitrate= 438.9kbits/s    frame=   77 fps= 12 q=0.0 size=     130kB time=2.66 bitrate= 399.0kbits/s    frame=   83 fps= 12 q=0.0 size=     130kB time=2.87 bitrate= 370.2kbits/s    frame=   89 fps= 11 q=0.0 size=     130kB time=3.08 bitrate= 345.2kbits/s    frame=   95 fps= 11 q=0.0 size=     313kB time=3.25 bitrate= 789.8kbits/s    frame=  103 fps= 11 q=0.0 size=     376kB time=3.54 bitrate= 870.9kbits/s    frame=  111 fps= 11 q=0.0 size=     376kB time=3.83 bitrate= 805.4kbits/s    frame=  118 fps= 11 q=0.0 size=     376kB time=4.08 bitrate= 755.3kbits/s    frame=  125 fps= 11 q=0.0 size=     376kB time=4.32 bitrate= 713.0kbits/s    frame=  131 fps= 11 q=0.0 size=     376kB time=4.53 bitrate= 680.3kbits/s    frame=  138 fps= 11 q=0.0 size=     376kB time=4.77 bitrate= 645.8kbits/s    frame=  144 fps= 11 q=0.0 size=     376kB time=4.98 bitrate= 618.9kbits/s    frame=  150 fps= 11 q=0.0 size=     376kB time=5.19 bitrate= 594.1kbits/s    frame=  156 fps= 11 q=0.0 size=     621kB time=5.39 bitrate= 942.5kbits/s    frame=  163 fps= 11 q=0.0 size=     621kB time=5.64 bitrate= 902.1kbits/s    frame=  170 fps= 11 q=0.0 size=     621kB time=5.88 bitrate= 864.9kbits/s    frame=  176 fps= 11 q=0.0 size=     621kB time=6.09 bitrate= 835.4kbits/s    frame=  183 fps= 11 q=0.0 size=     621kB time=6.33 bitrate= 803.5kbits/s    frame=  189 fps= 11 q=0.0 size=     621kB time=6.53 bitrate= 778.0kbits/s    frame=  201 fps= 12 q=0.0 size=     621kB time=6.80 bitrate= 747.4kbits/s    frame=  201 fps= 12 q=0.0 Lsize=     901kB time=6.80 bitrate=1084.7kbits/s    
+video:210kB audio:683kB global headers:3kB muxing overhead 0.495025%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xadeb20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatogatito/gatogatito.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libx264 @ 0xae6cc0] using SAR=1/1
+[libx264 @ 0xae6cc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0xae6cc0] profile High, level 3.1
+[libx264 @ 0xae6cc0] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/gatogatito/gatogatito.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 683083.00 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libx264)
+  Stream #0:0 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+[aac @ 0xae0f00] Input buffer exhausted before END element found
+Error while decoding stream #0:0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xadeb20] stream 0, offset 0x14e796: partial file
+media/videos/gatogatito/gatogatito.mp4: Invalid data found when processing input
+frame=   32 fps= 13 q=32763.0 Lsize=     711kB time=1.04 bitrate=5619.1kbits/s    
+video:0kB audio:24kB global headers:0kB muxing overhead 2877.618834%
+[libx264 @ 0xae6cc0] frame I:8     Avg QP:22.31  size: 32080
+[libx264 @ 0xae6cc0] frame P:24    Avg QP:24.59  size: 18482
+[libx264 @ 0xae6cc0] mb I  I16..4: 88.3%  8.3%  3.4%
+[libx264 @ 0xae6cc0] mb P  I16..4: 62.9%  3.1%  1.5%  P16..4:  5.1%  0.3%  0.1%  0.0%  0.0%    skip:27.0%
+[libx264 @ 0xae6cc0] 8x8 transform intra:5.8% inter:18.9%
+[libx264 @ 0xae6cc0] coded y,uvDC,uvAC intra: 63.9% 77.4% 42.0% inter: 8.7% 12.4% 6.7%
+[libx264 @ 0xae6cc0] i16 v,h,dc,p: 29% 18% 51%  2%
+[libx264 @ 0xae6cc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 12% 11% 57%  4%  3%  3%  3%  3%  4%
+[libx264 @ 0xae6cc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 23% 42%  1%  1%  1%  1%  1%  1%
+[libx264 @ 0xae6cc0] i8c dc,h,v,p: 66% 13% 21%  0%
+[libx264 @ 0xae6cc0] Weighted P-Frames: Y:4.2% UV:0.0%
+[libx264 @ 0xae6cc0] ref P L0: 85.4%  4.5%  8.4%  1.7%
+[libx264 @ 0xae6cc0] kb/s:5063.19
+[2015-11-23 03:42:36,243: INFO/MainProcess] Task apps.feitube.tasks.video_encode[c75c2323-164b-4323-82f4-eefc9ef44bd3] succeeded in 50.62591557599808s: None
+[2015-11-23 03:45:33,290: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[4a1f12a2-51fc-42af-83fe-09255149545f]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fddf/fddf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libvpx @ 0x19f5f20] v1.3.0
+Output #0, webm, to 'media/videos/fddf/fddf.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=       4kB time=0.24 bitrate= 148.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.55 bitrate= 537.6kbits/s    frame=   13 fps=  5 q=0.0 size=      36kB time=0.76 bitrate= 391.9kbits/s    frame=   17 fps=  6 q=0.0 size=      36kB time=1.04 bitrate= 287.2kbits/s    frame=   21 fps=  6 q=0.0 size=      68kB time=1.29 bitrate= 433.1kbits/s    frame=   25 fps=  6 q=0.0 size=      68kB time=1.57 bitrate= 356.4kbits/s    frame=   26 fps=  5 q=0.0 size=      68kB time=1.64 bitrate= 342.5kbits/s    frame=   32 fps=  6 q=0.0 size=      68kB time=2.10 bitrate= 266.0kbits/s    frame=   32 fps=  5 q=0.0 Lsize=     106kB time=2.10 bitrate= 412.0kbits/s    
+video:70kB audio:30kB global headers:4kB muxing overhead 2.209085%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fddf/fddf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[flac @ 0x7c4540] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/fddf/fddf.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 14.74 tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.34 bitrate=   3.5kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.75 bitrate=   1.6kbits/s    frame=   18 fps= 11 q=0.0 size=       0kB time=1.22 bitrate=   1.0kbits/s    frame=   24 fps= 11 q=0.0 size=     130kB time=1.63 bitrate= 654.4kbits/s    frame=   32 fps= 11 q=0.0 size=     193kB time=2.17 bitrate= 729.4kbits/s    frame=   32 fps= 11 q=0.0 Lsize=     488kB time=2.17 bitrate=1839.3kbits/s    
+video:93kB audio:389kB global headers:3kB muxing overhead 0.522275%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fddf/fddf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libx264 @ 0x2494f20] using SAR=1/1
+[libx264 @ 0x2494f20] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x2494f20] profile High, level 3.1
+[libx264 @ 0x2494f20] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/fddf/fddf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 960k tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+[h264 @ 0x2ace120] AVC: nal size 12137
+    Last message repeated 1 times
+[h264 @ 0x2ace120] no frame!
+frame=    1 fps=  0 q=27.0 Lsize=      38kB time=0.07 bitrate=4545.0kbits/s    
+video:0kB audio:19kB global headers:0kB muxing overhead 101.399990%
+[libx264 @ 0x2494f20] frame I:1     Avg QP:20.38  size: 16156
+[libx264 @ 0x2494f20] mb I  I16..4: 49.4% 50.2%  0.4%
+[libx264 @ 0x2494f20] 8x8 transform intra:50.2%
+[libx264 @ 0x2494f20] coded y,uvDC,uvAC intra: 26.9% 85.1% 31.1%
+[libx264 @ 0x2494f20] i16 v,h,dc,p: 35% 27% 19% 18%
+[libx264 @ 0x2494f20] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 31% 25%  4%  2%  2%  4%  1%  4%
+[libx264 @ 0x2494f20] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 33% 13%  5%  6%  5%  6%  1%  0%
+[libx264 @ 0x2494f20] i8c dc,h,v,p: 46% 22% 21% 11%
+[libx264 @ 0x2494f20] kb/s:1904.59
+[2015-11-23 03:45:42,464: INFO/MainProcess] Task apps.feitube.tasks.video_encode[4a1f12a2-51fc-42af-83fe-09255149545f] succeeded in 9.171386098001676s: None
+[2015-11-23 03:49:47,091: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[071db026-77d9-447e-8ed1-cf7235ec4114]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/sdsf/sdsf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libvpx @ 0x10cef20] v1.3.0
+Output #0, webm, to 'media/videos/sdsf/sdsf.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=       4kB time=0.24 bitrate= 148.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.55 bitrate= 537.6kbits/s    frame=   13 fps=  5 q=0.0 size=      36kB time=0.76 bitrate= 391.9kbits/s    frame=   17 fps=  6 q=0.0 size=      36kB time=1.04 bitrate= 287.2kbits/s    frame=   21 fps=  6 q=0.0 size=      68kB time=1.29 bitrate= 433.1kbits/s    frame=   25 fps=  6 q=0.0 size=      68kB time=1.57 bitrate= 356.4kbits/s    frame=   26 fps=  5 q=0.0 size=      68kB time=1.64 bitrate= 342.5kbits/s    frame=   32 fps=  5 q=0.0 size=      68kB time=2.10 bitrate= 266.0kbits/s    frame=   32 fps=  5 q=0.0 Lsize=     106kB time=2.10 bitrate= 412.0kbits/s    
+video:70kB audio:30kB global headers:4kB muxing overhead 2.209085%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/sdsf/sdsf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[flac @ 0x6e3540] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/sdsf/sdsf.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 14.74 tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.34 bitrate=   3.5kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.75 bitrate=   1.6kbits/s    frame=   18 fps= 10 q=0.0 size=       0kB time=1.22 bitrate=   1.0kbits/s    frame=   24 fps= 10 q=0.0 size=     130kB time=1.63 bitrate= 654.4kbits/s    frame=   32 fps= 11 q=0.0 size=     193kB time=2.17 bitrate= 729.4kbits/s    frame=   32 fps= 11 q=0.0 Lsize=     488kB time=2.17 bitrate=1839.3kbits/s    
+video:93kB audio:389kB global headers:3kB muxing overhead 0.522275%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/sdsf/sdsf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libx264 @ 0x1e16f20] using SAR=1/1
+[libx264 @ 0x1e16f20] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x1e16f20] profile High, level 3.1
+[libx264 @ 0x1e16f20] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/sdsf/sdsf.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 960k tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+[h264 @ 0x2450120] AVC: nal size 12137
+    Last message repeated 1 times
+[h264 @ 0x2450120] no frame!
+frame=    1 fps=  0 q=27.0 Lsize=      38kB time=0.07 bitrate=4545.0kbits/s    
+video:0kB audio:19kB global headers:0kB muxing overhead 101.399990%
+[libx264 @ 0x1e16f20] frame I:1     Avg QP:20.38  size: 16156
+[libx264 @ 0x1e16f20] mb I  I16..4: 49.4% 50.2%  0.4%
+[libx264 @ 0x1e16f20] 8x8 transform intra:50.2%
+[libx264 @ 0x1e16f20] coded y,uvDC,uvAC intra: 26.9% 85.1% 31.1%
+[libx264 @ 0x1e16f20] i16 v,h,dc,p: 35% 27% 19% 18%
+[libx264 @ 0x1e16f20] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 31% 25%  4%  2%  2%  4%  1%  4%
+[libx264 @ 0x1e16f20] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 33% 13%  5%  6%  5%  6%  1%  0%
+[libx264 @ 0x1e16f20] i8c dc,h,v,p: 46% 22% 21% 11%
+[libx264 @ 0x1e16f20] kb/s:1904.59
+[2015-11-23 03:49:56,348: INFO/MainProcess] Task apps.feitube.tasks.video_encode[071db026-77d9-447e-8ed1-cf7235ec4114] succeeded in 9.255511661001947s: None
+[2015-11-23 03:52:27,433: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[1f33e763-2dbe-420a-a6f8-e6f688260d2c]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fdfa/fdfa.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+  Duration: 00:00:02.11, start: 0.000000, bitrate: 9703 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8789 kb/s, PAR 65536:65536 DAR 16:9, 15 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+[libvpx @ 0x1cb7e00] v1.3.0
+Output #0, webm, to 'media/videos/fdfa/fdfa.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  3 q=0.0 size=      36kB time=0.21 bitrate=1431.8kbits/s    frame=    8 fps=  3 q=0.0 size=      36kB time=0.39 bitrate= 761.7kbits/s    frame=   12 fps=  4 q=0.0 size=      49kB time=0.66 bitrate= 608.4kbits/s    frame=   15 fps=  4 q=0.0 size=      49kB time=0.86 bitrate= 471.9kbits/s    frame=   19 fps=  5 q=0.0 size=      49kB time=1.17 bitrate= 346.2kbits/s    frame=   23 fps=  5 q=0.0 size=      81kB time=1.43 bitrate= 466.8kbits/s    frame=   29 fps=  5 q=0.0 size=      81kB time=1.87 bitrate= 356.8kbits/s    frame=   29 fps=  5 q=0.0 Lsize=     100kB time=1.87 bitrate= 438.0kbits/s    
+video:70kB audio:24kB global headers:4kB muxing overhead 2.077071%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fdfa/fdfa.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+  Duration: 00:00:02.11, start: 0.000000, bitrate: 9703 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8789 kb/s, PAR 65536:65536 DAR 16:9, 15 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+[flac @ 0xb12420] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/fdfa/fdfa.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 15 tbn, 15 tbc
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.33 bitrate=   3.6kbits/s    frame=   10 fps=  9 q=0.0 size=       0kB time=0.67 bitrate=   1.8kbits/s    frame=   16 fps=  9 q=0.0 size=       0kB time=1.07 bitrate=   1.1kbits/s    frame=   23 fps= 10 q=0.0 size=     130kB time=1.53 bitrate= 693.7kbits/s    frame=   29 fps= 10 q=0.0 size=     193kB time=1.93 bitrate= 816.8kbits/s    frame=   29 fps= 10 q=0.0 Lsize=     403kB time=1.93 bitrate=1708.2kbits/s    
+video:71kB audio:327kB global headers:3kB muxing overhead 0.542469%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/fdfa/fdfa.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+  Duration: 00:00:02.11, start: 0.000000, bitrate: 9703 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8789 kb/s, PAR 65536:65536 DAR 16:9, 15 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+[libx264 @ 0x149fe00] using SAR=1/1
+[libx264 @ 0x149fe00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x149fe00] profile High, level 3.1
+[libx264 @ 0x149fe00] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/fdfa/fdfa.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-07-13 01:30:35
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 326250 tbn, 15 tbc
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-07-13 01:30:35
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=27.0 Lsize=      38kB time=0.07 bitrate=4631.8kbits/s    
+video:0kB audio:18kB global headers:0kB muxing overhead 105.181209%
+[libx264 @ 0x149fe00] frame I:1     Avg QP:20.48  size: 16492
+[libx264 @ 0x149fe00] mb I  I16..4: 34.4% 64.0%  1.6%
+[libx264 @ 0x149fe00] 8x8 transform intra:64.0%
+[libx264 @ 0x149fe00] coded y,uvDC,uvAC intra: 37.4% 55.1% 6.4%
+[libx264 @ 0x149fe00] i16 v,h,dc,p: 29% 19% 22% 29%
+[libx264 @ 0x149fe00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 22% 24%  5%  3%  3%  3%  4%  3%
+[libx264 @ 0x149fe00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 17% 13% 14%  4%  4%  4%  8%  3%
+[libx264 @ 0x149fe00] i8c dc,h,v,p: 50% 13% 24% 13%
+[libx264 @ 0x149fe00] kb/s:1978.40
+[2015-11-23 03:52:36,238: INFO/MainProcess] Task apps.feitube.tasks.video_encode[1f33e763-2dbe-420a-a6f8-e6f688260d2c] succeeded in 8.803270805001375s: None
+[2015-11-23 03:55:40,118: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[02eb8c24-663b-4ae8-9d9b-ca3c916da1dc]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/dfdfdd/dfdfdd.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libvpx @ 0x1054f20] v1.3.0
+Output #0, webm, to 'media/videos/dfdfdd/dfdfdd.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=       4kB time=0.24 bitrate= 148.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.55 bitrate= 537.6kbits/s    frame=   13 fps=  6 q=0.0 size=      36kB time=0.76 bitrate= 391.9kbits/s    frame=   17 fps=  6 q=0.0 size=      36kB time=1.04 bitrate= 287.2kbits/s    frame=   21 fps=  6 q=0.0 size=      68kB time=1.29 bitrate= 433.1kbits/s    frame=   25 fps=  6 q=0.0 size=      68kB time=1.57 bitrate= 356.4kbits/s    frame=   26 fps=  6 q=0.0 size=      68kB time=1.64 bitrate= 342.5kbits/s    frame=   32 fps=  6 q=0.0 size=      68kB time=2.10 bitrate= 266.0kbits/s    frame=   32 fps=  6 q=0.0 Lsize=     106kB time=2.10 bitrate= 412.0kbits/s    
+video:70kB audio:30kB global headers:4kB muxing overhead 2.209085%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/dfdfdd/dfdfdd.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[flac @ 0xb4b540] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/dfdfdd/dfdfdd.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 14.74 tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.34 bitrate=   3.5kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.75 bitrate=   1.6kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=1.15 bitrate=   1.0kbits/s    frame=   23 fps= 11 q=0.0 size=     130kB time=1.56 bitrate= 682.8kbits/s    frame=   32 fps= 11 q=0.0 size=     193kB time=2.17 bitrate= 729.4kbits/s    frame=   32 fps= 11 q=0.0 Lsize=     488kB time=2.17 bitrate=1839.3kbits/s    
+video:93kB audio:389kB global headers:3kB muxing overhead 0.522275%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/dfdfdd/dfdfdd.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libx264 @ 0x2456f20] using SAR=1/1
+[libx264 @ 0x2456f20] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x2456f20] profile High, level 3.1
+[libx264 @ 0x2456f20] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/dfdfdd/dfdfdd.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 960k tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+[h264 @ 0x2a90120] AVC: nal size 12137
+    Last message repeated 1 times
+[h264 @ 0x2a90120] no frame!
+frame=    1 fps=  0 q=27.0 Lsize=      38kB time=0.07 bitrate=4545.0kbits/s    
+video:0kB audio:19kB global headers:0kB muxing overhead 101.399990%
+[libx264 @ 0x2456f20] frame I:1     Avg QP:20.38  size: 16156
+[libx264 @ 0x2456f20] mb I  I16..4: 49.4% 50.2%  0.4%
+[libx264 @ 0x2456f20] 8x8 transform intra:50.2%
+[libx264 @ 0x2456f20] coded y,uvDC,uvAC intra: 26.9% 85.1% 31.1%
+[libx264 @ 0x2456f20] i16 v,h,dc,p: 35% 27% 19% 18%
+[libx264 @ 0x2456f20] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 31% 25%  4%  2%  2%  4%  1%  4%
+[libx264 @ 0x2456f20] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 33% 13%  5%  6%  5%  6%  1%  0%
+[libx264 @ 0x2456f20] i8c dc,h,v,p: 46% 22% 21% 11%
+[libx264 @ 0x2456f20] kb/s:1904.59
+[2015-11-23 03:55:49,180: INFO/MainProcess] Task apps.feitube.tasks.video_encode[02eb8c24-663b-4ae8-9d9b-ca3c916da1dc] succeeded in 9.05990035099967s: None
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7fcc8abf3a58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-23 04:00:11,840: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-23 04:00:11,856: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-23 04:00:12,864: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 04:00:12,883: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 04:00:12,884: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-23 04:00:57,674: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[c4a39458-6e74-4b04-96d7-5be926a4a21b]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatitotott/gatitotott.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libvpx @ 0xee4f20] v1.3.0
+Output #0, webm, to 'media/videos/gatitotott/gatitotott.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=       4kB time=0.24 bitrate= 148.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.55 bitrate= 537.6kbits/s    frame=   13 fps=  5 q=0.0 size=      36kB time=0.76 bitrate= 391.9kbits/s    frame=   17 fps=  6 q=0.0 size=      36kB time=1.04 bitrate= 287.2kbits/s    frame=   21 fps=  6 q=0.0 size=      68kB time=1.29 bitrate= 433.1kbits/s    frame=   25 fps=  6 q=0.0 size=      68kB time=1.57 bitrate= 356.4kbits/s    frame=   26 fps=  5 q=0.0 size=      68kB time=1.64 bitrate= 342.5kbits/s    frame=   32 fps=  6 q=0.0 size=      68kB time=2.10 bitrate= 266.0kbits/s    frame=   32 fps=  5 q=0.0 Lsize=     106kB time=2.10 bitrate= 412.0kbits/s    
+video:70kB audio:30kB global headers:4kB muxing overhead 2.209085%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatitotott/gatitotott.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[flac @ 0x25cd540] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/gatitotott/gatitotott.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 14.74 tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.34 bitrate=   3.5kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.75 bitrate=   1.6kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=1.15 bitrate=   1.0kbits/s    frame=   23 fps= 11 q=0.0 size=     130kB time=1.56 bitrate= 682.8kbits/s    frame=   32 fps= 11 q=0.0 size=     193kB time=2.17 bitrate= 729.4kbits/s    frame=   32 fps= 11 q=0.0 Lsize=     488kB time=2.17 bitrate=1839.3kbits/s    
+video:93kB audio:389kB global headers:3kB muxing overhead 0.522275%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gatitotott/gatitotott.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libx264 @ 0x2662f20] using SAR=1/1
+[libx264 @ 0x2662f20] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x2662f20] profile High, level 3.1
+[libx264 @ 0x2662f20] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/gatitotott/gatitotott2.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 960k tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   32 fps= 11 q=32764.0 Lsize=     675kB time=2.04 bitrate=2717.3kbits/s    
+video:0kB audio:51kB global headers:0kB muxing overhead 1220.961641%
+[libx264 @ 0x2662f20] frame I:4     Avg QP:19.65  size: 26752
+[libx264 @ 0x2662f20] frame P:28    Avg QP:22.08  size: 18856
+[libx264 @ 0x2662f20] mb I  I16..4: 24.7% 72.4%  2.9%
+[libx264 @ 0x2662f20] mb P  I16..4: 12.4% 36.5%  0.8%  P16..4: 33.0%  4.8%  2.7%  0.0%  0.0%    skip: 9.7%
+[libx264 @ 0x2662f20] 8x8 transform intra:73.3% inter:90.3%
+[libx264 @ 0x2662f20] coded y,uvDC,uvAC intra: 43.7% 90.5% 65.7% inter: 23.1% 67.4% 12.8%
+[libx264 @ 0x2662f20] i16 v,h,dc,p: 25% 19% 15% 41%
+[libx264 @ 0x2662f20] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 19% 26%  5%  7%  5%  4%  5%  4%
+[libx264 @ 0x2662f20] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 19% 14%  5% 13%  8%  5%  5%  2%
+[libx264 @ 0x2662f20] i8c dc,h,v,p: 57% 20% 15%  8%
+[libx264 @ 0x2662f20] Weighted P-Frames: Y:3.6% UV:3.6%
+[libx264 @ 0x2662f20] ref P L0: 74.9% 11.0% 10.6%  3.4%  0.0%
+[libx264 @ 0x2662f20] kb/s:2339.27
+[2015-11-23 04:01:09,722: INFO/MainProcess] Task apps.feitube.tasks.video_encode[c4a39458-6e74-4b04-96d7-5be926a4a21b] succeeded in 12.045429304998834s: None
+[2015-11-23 04:02:40,281: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[0765bdb8-e131-4dcd-ba8f-658a4f9140ae]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x11d3b20] moov atom not found
+media/videos/gatito22/gatito22.mp4: Invalid data found when processing input
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd25b20] moov atom not found
+media/videos/gatito22/gatito22.mp4: Invalid data found when processing input
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x21c7b20] moov atom not found
+media/videos/gatito22/gatito22.mp4: Invalid data found when processing input
+mv: cannot stat 'media/videos/gatito22/gatito222.mp4': No such file or directory
+[2015-11-23 04:02:40,375: INFO/MainProcess] Task apps.feitube.tasks.video_encode[0765bdb8-e131-4dcd-ba8f-658a4f9140ae] succeeded in 0.09248214699618984s: None
+[2015-11-23 04:04:51,927: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[69811658-3b91-469c-b7a8-836529d9cc2a]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x2147b20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato33/gato33.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libvpx @ 0x214fcc0] v1.3.0
+Output #0, webm, to 'media/videos/gato33/gato33.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libvpx)
+  Stream #0:0 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    7 fps=  5 q=0.0 size=       4kB time=0.20 bitrate= 177.4kbits/s    frame=    9 fps=  4 q=0.0 size=      36kB time=0.21 bitrate=1404.8kbits/s    frame=   15 fps=  5 q=0.0 size=      42kB time=0.48 bitrate= 705.2kbits/s    frame=   20 fps=  6 q=0.0 size=      42kB time=0.60 bitrate= 563.0kbits/s    frame=   24 fps=  6 q=0.0 size=      42kB time=0.75 bitrate= 451.7kbits/s    frame=   29 fps=  6 q=0.0 size=      42kB time=0.93 bitrate= 368.2kbits/s    frame=   33 fps=  6 q=0.0 size=      77kB time=1.07 bitrate= 587.6kbits/s    frame=   37 fps=  6 q=0.0 size=      86kB time=1.22 bitrate= 574.3kbits/s    frame=   41 fps=  6 q=0.0 size=      96kB time=1.39 bitrate= 562.5kbits/s    frame=   46 fps=  6 q=0.0 size=     100kB time=1.49 bitrate= 552.4kbits/s    frame=   49 fps=  6 q=0.0 size=     100kB time=1.59 bitrate= 515.0kbits/s    frame=   54 fps=  6 q=0.0 size=     100kB time=1.76 bitrate= 465.7kbits/s    frame=   59 fps=  7 q=0.0 size=     100kB time=1.94 bitrate= 424.5kbits/s    frame=   64 fps=  7 q=0.0 size=     100kB time=2.13 bitrate= 385.5kbits/s    frame=   69 fps=  7 q=0.0 size=     100kB time=2.26 bitrate= 363.3kbits/s    frame=   74 fps=  7 q=0.0 size=     132kB time=2.48 bitrate= 437.3kbits/s    frame=   78 fps=  7 q=0.0 size=     133kB time=2.62 bitrate= 414.4kbits/s    frame=   82 fps=  7 q=0.0 size=     133kB time=2.79 bitrate= 389.9kbits/s    frame=   85 fps=  6 q=0.0 size=     133kB time=2.91 bitrate= 373.9kbits/s    frame=   89 fps=  6 q=0.0 size=     158kB time=3.09 bitrate= 418.3kbits/s    frame=   93 fps=  6 q=0.0 size=     158kB time=3.18 bitrate= 406.7kbits/s    frame=   96 fps=  6 q=0.0 size=     158kB time=3.26 bitrate= 396.5kbits/s    frame=  100 fps=  6 q=0.0 size=     190kB time=3.36 bitrate= 462.7kbits/s    frame=  105 fps=  6 q=0.0 size=     190kB time=3.57 bitrate= 435.6kbits/s    frame=  109 fps=  6 q=0.0 size=     190kB time=3.67 bitrate= 423.8kbits/s    frame=  113 fps=  7 q=0.0 size=     190kB time=3.80 bitrate= 409.3kbits/s    frame=  117 fps=  7 q=0.0 size=     190kB time=4.00 bitrate= 388.6kbits/s    frame=  122 fps=  7 q=0.0 size=     222kB time=4.14 bitrate= 438.9kbits/s    frame=  125 fps=  6 q=0.0 size=     222kB time=4.23 bitrate= 429.2kbits/s    frame=  129 fps=  6 q=0.0 size=     222kB time=4.37 bitrate= 415.4kbits/s    frame=  133 fps=  6 q=0.0 size=     222kB time=4.50 bitrate= 403.6kbits/s    frame=  137 fps=  6 q=0.0 size=     222kB time=4.63 bitrate= 392.4kbits/s    frame=  141 fps=  6 q=0.0 size=     222kB time=4.76 bitrate= 381.9kbits/s    frame=  143 fps=  6 q=0.0 size=     222kB time=4.84 bitrate= 375.1kbits/s    frame=  148 fps=  6 q=0.0 size=     259kB time=5.04 bitrate= 420.5kbits/s    frame=  152 fps=  6 q=0.0 size=     259kB time=5.12 bitrate= 414.3kbits/s    frame=  158 fps=  6 q=0.0 size=     259kB time=5.36 bitrate= 395.3kbits/s    frame=  162 fps=  6 q=0.0 size=     259kB time=5.46 bitrate= 388.0kbits/s    frame=  168 fps=  7 q=0.0 size=     259kB time=5.68 bitrate= 373.3kbits/s    frame=  173 fps=  7 q=0.0 size=     259kB time=5.83 bitrate= 363.8kbits/s    frame=  179 fps=  7 q=0.0 size=     291kB time=6.02 bitrate= 395.7kbits/s    frame=  184 fps=  7 q=0.0 size=     291kB time=6.19 bitrate= 384.8kbits/s    frame=  189 fps=  7 q=0.0 size=     291kB time=6.36 bitrate= 374.5kbits/s    frame=  194 fps=  7 q=0.0 size=     291kB time=6.58 bitrate= 361.7kbits/s    frame=  201 fps=  7 q=0.0 size=     291kB time=6.69 bitrate= 356.1kbits/s    frame=  201 fps=  7 q=0.0 Lsize=     326kB time=6.72 bitrate= 397.2kbits/s    
+video:236kB audio:79kB global headers:4kB muxing overhead 2.249796%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x10aab20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato33/gato33.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[flac @ 0x10b2240] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/gato33/gato33.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 28.92 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libtheora)
+  Stream #0:0 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    8 fps=  0 q=0.0 size=       0kB time=0.27 bitrate=   4.4kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=0.56 bitrate=   2.1kbits/s    frame=   25 fps= 12 q=0.0 size=       0kB time=0.85 bitrate=   1.4kbits/s    frame=   31 fps= 12 q=0.0 size=       0kB time=1.07 bitrate=   1.1kbits/s    frame=   38 fps= 11 q=0.0 size=       0kB time=1.31 bitrate=   0.9kbits/s    frame=   44 fps= 11 q=0.0 size=       0kB time=1.52 bitrate=   0.8kbits/s    frame=   50 fps= 11 q=0.0 size=      67kB time=1.73 bitrate= 315.2kbits/s    frame=   57 fps= 12 q=0.0 size=     130kB time=1.97 bitrate= 539.1kbits/s    frame=   64 fps= 12 q=0.0 size=     130kB time=2.21 bitrate= 480.1kbits/s    frame=   71 fps= 12 q=0.0 size=     130kB time=2.45 bitrate= 432.8kbits/s    frame=   77 fps= 12 q=0.0 size=     130kB time=2.66 bitrate= 399.0kbits/s    frame=   83 fps= 12 q=0.0 size=     130kB time=2.87 bitrate= 370.2kbits/s    frame=   89 fps= 11 q=0.0 size=     130kB time=3.08 bitrate= 345.2kbits/s    frame=   95 fps= 11 q=0.0 size=     313kB time=3.25 bitrate= 789.8kbits/s    frame=  103 fps= 11 q=0.0 size=     376kB time=3.54 bitrate= 870.9kbits/s    frame=  111 fps= 11 q=0.0 size=     376kB time=3.83 bitrate= 805.4kbits/s    frame=  118 fps= 11 q=0.0 size=     376kB time=4.08 bitrate= 755.3kbits/s    frame=  125 fps= 11 q=0.0 size=     376kB time=4.32 bitrate= 713.0kbits/s    frame=  131 fps= 11 q=0.0 size=     376kB time=4.53 bitrate= 680.3kbits/s    frame=  138 fps= 11 q=0.0 size=     376kB time=4.77 bitrate= 645.8kbits/s    frame=  144 fps= 11 q=0.0 size=     376kB time=4.98 bitrate= 618.9kbits/s    frame=  150 fps= 11 q=0.0 size=     376kB time=5.19 bitrate= 594.1kbits/s    frame=  157 fps= 11 q=0.0 size=     621kB time=5.43 bitrate= 936.5kbits/s    frame=  164 fps= 11 q=0.0 size=     621kB time=5.67 bitrate= 896.6kbits/s    frame=  171 fps= 11 q=0.0 size=     621kB time=5.91 bitrate= 859.9kbits/s    frame=  177 fps= 11 q=0.0 size=     621kB time=6.12 bitrate= 830.7kbits/s    frame=  184 fps= 12 q=0.0 size=     621kB time=6.36 bitrate= 799.1kbits/s    frame=  190 fps= 12 q=0.0 size=     621kB time=6.57 bitrate= 773.9kbits/s    frame=  201 fps= 12 q=0.0 size=     621kB time=6.80 bitrate= 747.4kbits/s    frame=  201 fps= 12 q=0.0 Lsize=     901kB time=6.80 bitrate=1084.7kbits/s    
+video:210kB audio:683kB global headers:3kB muxing overhead 0.495025%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x1ac8b20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato33/gato33.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libx264 @ 0x1ad0cc0] using SAR=1/1
+[libx264 @ 0x1ad0cc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x1ad0cc0] profile High, level 3.1
+[libx264 @ 0x1ad0cc0] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/gato33/gato332.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 683083.00 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libx264)
+  Stream #0:0 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   46 fps=  0 q=0.0 size=       0kB time=1.56 bitrate=   0.2kbits/s    frame=   51 fps= 33 q=29.0 size=      60kB time=1.74 bitrate= 284.3kbits/s    frame=   64 fps= 31 q=29.0 size=     372kB time=0.41 bitrate=7336.8kbits/s    frame=   72 fps= 28 q=29.0 size=     500kB time=0.69 bitrate=5925.2kbits/s    frame=   83 fps= 26 q=29.0 size=     763kB time=1.07 bitrate=5830.2kbits/s    frame=   91 fps= 24 q=29.0 size=     897kB time=1.35 bitrate=5450.8kbits/s    frame=  100 fps= 23 q=29.0 size=    1089kB time=1.66 bitrate=5374.2kbits/s    frame=  108 fps= 22 q=29.0 size=    1249kB time=1.94 bitrate=5285.8kbits/s    frame=  114 fps= 21 q=29.0 size=    1400kB time=2.14 bitrate=5349.9kbits/s    frame=  122 fps= 20 q=29.0 size=    1542kB time=2.42 bitrate=5218.5kbits/s    frame=  129 fps= 20 q=29.0 size=    1704kB time=2.66 bitrate=5244.2kbits/s    frame=  141 fps= 20 q=29.0 size=    1856kB time=3.08 bitrate=4940.9kbits/s    frame=  148 fps= 19 q=29.0 size=    2065kB time=3.32 bitrate=5095.9kbits/s    frame=  157 fps= 19 q=29.0 size=    2275kB time=3.63 bitrate=5133.7kbits/s    frame=  161 fps= 18 q=29.0 size=    2366kB time=3.77 bitrate=5142.6kbits/s    frame=  169 fps= 18 q=29.0 size=    2537kB time=4.05 bitrate=5137.3kbits/s    frame=  176 fps= 18 q=29.0 size=    2733kB time=4.29 bitrate=5222.4kbits/s    frame=  184 fps= 17 q=29.0 size=    2911kB time=4.56 bitrate=5224.9kbits/s    frame=  190 fps= 17 q=29.0 size=    3042kB time=4.77 bitrate=5223.5kbits/s    frame=  201 fps= 17 q=29.0 size=    3270kB time=5.15 bitrate=5199.6kbits/s    frame=  201 fps= 14 q=32764.0 Lsize=    4337kB time=6.73 bitrate=5280.7kbits/s    
+video:3166kB audio:132kB global headers:0kB muxing overhead 31.494664%
+[libx264 @ 0x1ad0cc0] frame I:28    Avg QP:22.25  size: 30011
+[libx264 @ 0x1ad0cc0] frame P:170   Avg QP:24.81  size: 20319
+[libx264 @ 0x1ad0cc0] frame B:3     Avg QP:24.19  size:  1305
+[libx264 @ 0x1ad0cc0] consecutive B-frames: 97.5%  1.0%  1.5%  0.0%
+[libx264 @ 0x1ad0cc0] mb I  I16..4: 89.9%  5.1%  5.0%
+[libx264 @ 0x1ad0cc0] mb P  I16..4: 64.5%  3.0%  2.0%  P16..4: 14.5%  0.8%  0.5%  0.0%  0.0%    skip:14.8%
+[libx264 @ 0x1ad0cc0] mb B  I16..4:  2.8%  1.5%  0.0%  B16..8:  6.8%  0.8%  0.0%  direct: 0.0%  skip:88.1%  L0:74.9% L1:24.0% BI: 1.2%
+[libx264 @ 0x1ad0cc0] 8x8 transform intra:4.5% inter:22.2%
+[libx264 @ 0x1ad0cc0] coded y,uvDC,uvAC intra: 63.3% 68.0% 30.6% inter: 25.1% 23.9% 9.3%
+[libx264 @ 0x1ad0cc0] i16 v,h,dc,p: 27% 19% 52%  2%
+[libx264 @ 0x1ad0cc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 17% 51%  5%  2%  1%  2%  2%  4%
+[libx264 @ 0x1ad0cc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 26% 40%  1%  1%  0%  1%  1%  1%
+[libx264 @ 0x1ad0cc0] i8c dc,h,v,p: 66% 14% 20%  0%
+[libx264 @ 0x1ad0cc0] Weighted P-Frames: Y:1.2% UV:0.0%
+[libx264 @ 0x1ad0cc0] ref P L0: 81.3%  8.5%  7.6%  2.5%  0.0%
+[libx264 @ 0x1ad0cc0] ref B L0: 54.6% 45.0%  0.5%
+[libx264 @ 0x1ad0cc0] ref B L1: 68.2% 31.8%
+[libx264 @ 0x1ad0cc0] kb/s:4948.28
+[2015-11-23 04:05:54,315: INFO/MainProcess] Task apps.feitube.tasks.video_encode[69811658-3b91-469c-b7a8-836529d9cc2a] succeeded in 62.38603418300045s: None
+[2015-11-23 04:07:46,644: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[9bb7fa4a-2a6f-42f6-b611-c7a5bc7f7e29]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/abdul22/abdul22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libvpx @ 0x1f27f20] v1.3.0
+Output #0, webm, to 'media/videos/abdul22/abdul22.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=       4kB time=0.24 bitrate= 148.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.55 bitrate= 537.6kbits/s    frame=   13 fps=  5 q=0.0 size=      36kB time=0.76 bitrate= 391.9kbits/s    frame=   17 fps=  6 q=0.0 size=      36kB time=1.04 bitrate= 287.2kbits/s    frame=   21 fps=  6 q=0.0 size=      68kB time=1.29 bitrate= 433.1kbits/s    frame=   25 fps=  6 q=0.0 size=      68kB time=1.57 bitrate= 356.4kbits/s    frame=   26 fps=  5 q=0.0 size=      68kB time=1.64 bitrate= 342.5kbits/s    frame=   32 fps=  6 q=0.0 size=      68kB time=2.10 bitrate= 266.0kbits/s    frame=   32 fps=  6 q=0.0 Lsize=     106kB time=2.10 bitrate= 412.0kbits/s    
+video:70kB audio:30kB global headers:4kB muxing overhead 2.209085%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/abdul22/abdul22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[flac @ 0x17b8540] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/abdul22/abdul22.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 14.74 tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.34 bitrate=   3.5kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.75 bitrate=   1.6kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=1.15 bitrate=   1.0kbits/s    frame=   23 fps= 11 q=0.0 size=     130kB time=1.56 bitrate= 682.8kbits/s    frame=   32 fps= 11 q=0.0 size=     193kB time=2.17 bitrate= 729.4kbits/s    frame=   32 fps= 11 q=0.0 Lsize=     488kB time=2.17 bitrate=1839.3kbits/s    
+video:93kB audio:389kB global headers:3kB muxing overhead 0.522275%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/abdul22/abdul22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+  Duration: 00:00:02.51, start: 0.000000, bitrate: 9101 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 8907 kb/s, PAR 65536:65536 DAR 16:9, 14.74 fps, 90k tbn
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+[libx264 @ 0xf55f20] using SAR=1/1
+[libx264 @ 0xf55f20] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0xf55f20] profile High, level 3.1
+[libx264 @ 0xf55f20] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/abdul22/abdul222.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2014-09-11 22:20:19
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 960k tbn, 14.74 tbc
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2014-09-11 22:20:19
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   32 fps= 11 q=32765.0 Lsize=     675kB time=2.04 bitrate=2717.3kbits/s    
+video:0kB audio:51kB global headers:0kB muxing overhead 1220.961641%
+[libx264 @ 0xf55f20] frame I:4     Avg QP:19.65  size: 26752
+[libx264 @ 0xf55f20] frame P:28    Avg QP:22.08  size: 18856
+[libx264 @ 0xf55f20] mb I  I16..4: 24.7% 72.4%  2.9%
+[libx264 @ 0xf55f20] mb P  I16..4: 12.4% 36.5%  0.8%  P16..4: 33.0%  4.8%  2.7%  0.0%  0.0%    skip: 9.7%
+[libx264 @ 0xf55f20] 8x8 transform intra:73.3% inter:90.3%
+[libx264 @ 0xf55f20] coded y,uvDC,uvAC intra: 43.7% 90.5% 65.7% inter: 23.1% 67.4% 12.8%
+[libx264 @ 0xf55f20] i16 v,h,dc,p: 25% 19% 15% 41%
+[libx264 @ 0xf55f20] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 19% 26%  5%  7%  5%  4%  5%  4%
+[libx264 @ 0xf55f20] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 19% 14%  5% 13%  8%  5%  5%  2%
+[libx264 @ 0xf55f20] i8c dc,h,v,p: 57% 20% 15%  8%
+[libx264 @ 0xf55f20] Weighted P-Frames: Y:3.6% UV:3.6%
+[libx264 @ 0xf55f20] ref P L0: 74.9% 11.0% 10.6%  3.4%  0.0%
+[libx264 @ 0xf55f20] kb/s:2339.27
+[2015-11-23 04:07:58,676: INFO/MainProcess] Task apps.feitube.tasks.video_encode[9bb7fa4a-2a6f-42f6-b611-c7a5bc7f7e29] succeeded in 12.030240011998103s: None
+[2015-11-23 04:08:26,514: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[7dc3f03b-a63b-45fa-a1b8-788d55037ce7]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x947b20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato22/gato22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libvpx @ 0x94fcc0] v1.3.0
+Output #0, webm, to 'media/videos/gato22/gato22.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libvpx)
+  Stream #0:0 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    7 fps=  5 q=0.0 size=       4kB time=0.20 bitrate= 177.4kbits/s    frame=    9 fps=  4 q=0.0 size=      36kB time=0.21 bitrate=1404.8kbits/s    frame=   15 fps=  5 q=0.0 size=      42kB time=0.48 bitrate= 705.2kbits/s    frame=   20 fps=  6 q=0.0 size=      42kB time=0.60 bitrate= 563.0kbits/s    frame=   24 fps=  6 q=0.0 size=      42kB time=0.75 bitrate= 451.7kbits/s    frame=   29 fps=  6 q=0.0 size=      42kB time=0.93 bitrate= 368.2kbits/s    frame=   33 fps=  6 q=0.0 size=      77kB time=1.07 bitrate= 587.6kbits/s    frame=   37 fps=  6 q=0.0 size=      86kB time=1.22 bitrate= 574.3kbits/s    frame=   41 fps=  6 q=0.0 size=      96kB time=1.39 bitrate= 562.5kbits/s    frame=   46 fps=  6 q=0.0 size=     100kB time=1.49 bitrate= 552.4kbits/s    frame=   49 fps=  6 q=0.0 size=     100kB time=1.59 bitrate= 515.0kbits/s    frame=   54 fps=  6 q=0.0 size=     100kB time=1.76 bitrate= 465.7kbits/s    frame=   59 fps=  7 q=0.0 size=     100kB time=1.94 bitrate= 424.5kbits/s    frame=   64 fps=  7 q=0.0 size=     100kB time=2.13 bitrate= 385.5kbits/s    frame=   69 fps=  7 q=0.0 size=     100kB time=2.26 bitrate= 363.3kbits/s    frame=   74 fps=  7 q=0.0 size=     132kB time=2.48 bitrate= 437.3kbits/s    frame=   78 fps=  7 q=0.0 size=     133kB time=2.62 bitrate= 414.4kbits/s    frame=   82 fps=  7 q=0.0 size=     133kB time=2.79 bitrate= 389.9kbits/s    frame=   85 fps=  6 q=0.0 size=     133kB time=2.91 bitrate= 373.9kbits/s    frame=   89 fps=  6 q=0.0 size=     158kB time=3.09 bitrate= 418.3kbits/s    frame=   93 fps=  6 q=0.0 size=     158kB time=3.18 bitrate= 406.7kbits/s    frame=   96 fps=  6 q=0.0 size=     158kB time=3.26 bitrate= 396.5kbits/s    frame=  100 fps=  6 q=0.0 size=     190kB time=3.36 bitrate= 462.7kbits/s    frame=  104 fps=  6 q=0.0 size=     190kB time=3.56 bitrate= 436.9kbits/s    frame=  108 fps=  6 q=0.0 size=     190kB time=3.65 bitrate= 426.2kbits/s    frame=  112 fps=  6 q=0.0 size=     190kB time=3.80 bitrate= 409.5kbits/s    frame=  116 fps=  6 q=0.0 size=     190kB time=3.95 bitrate= 393.4kbits/s    frame=  121 fps=  7 q=0.0 size=     222kB time=4.09 bitrate= 443.6kbits/s    frame=  125 fps=  6 q=0.0 size=     222kB time=4.23 bitrate= 429.2kbits/s    frame=  129 fps=  6 q=0.0 size=     222kB time=4.37 bitrate= 415.4kbits/s    frame=  133 fps=  6 q=0.0 size=     222kB time=4.50 bitrate= 403.6kbits/s    frame=  137 fps=  6 q=0.0 size=     222kB time=4.63 bitrate= 392.4kbits/s    frame=  141 fps=  6 q=0.0 size=     222kB time=4.76 bitrate= 381.9kbits/s    frame=  143 fps=  6 q=0.0 size=     222kB time=4.84 bitrate= 375.1kbits/s    frame=  148 fps=  6 q=0.0 size=     259kB time=5.04 bitrate= 420.5kbits/s    frame=  152 fps=  6 q=0.0 size=     259kB time=5.12 bitrate= 414.3kbits/s    frame=  158 fps=  6 q=0.0 size=     259kB time=5.36 bitrate= 395.3kbits/s    frame=  162 fps=  6 q=0.0 size=     259kB time=5.46 bitrate= 388.0kbits/s    frame=  168 fps=  6 q=0.0 size=     259kB time=5.68 bitrate= 373.3kbits/s    frame=  173 fps=  7 q=0.0 size=     259kB time=5.83 bitrate= 363.8kbits/s    frame=  179 fps=  7 q=0.0 size=     291kB time=6.02 bitrate= 395.7kbits/s    frame=  184 fps=  7 q=0.0 size=     291kB time=6.19 bitrate= 384.8kbits/s    frame=  189 fps=  7 q=0.0 size=     291kB time=6.36 bitrate= 374.5kbits/s    frame=  194 fps=  7 q=0.0 size=     291kB time=6.58 bitrate= 361.7kbits/s    frame=  201 fps=  7 q=0.0 size=     291kB time=6.69 bitrate= 356.1kbits/s    frame=  201 fps=  7 q=0.0 Lsize=     326kB time=6.72 bitrate= 397.2kbits/s    
+video:236kB audio:79kB global headers:4kB muxing overhead 2.249796%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x16b7b20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato22/gato22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[flac @ 0x16bf240] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/gato22/gato22.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 28.92 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libtheora)
+  Stream #0:0 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    8 fps=  0 q=0.0 size=       0kB time=0.27 bitrate=   4.4kbits/s    frame=   17 fps= 11 q=0.0 size=       0kB time=0.56 bitrate=   2.1kbits/s    frame=   25 fps= 12 q=0.0 size=       0kB time=0.85 bitrate=   1.4kbits/s    frame=   31 fps= 11 q=0.0 size=       0kB time=1.07 bitrate=   1.1kbits/s    frame=   38 fps= 11 q=0.0 size=       0kB time=1.31 bitrate=   0.9kbits/s    frame=   44 fps= 11 q=0.0 size=       0kB time=1.52 bitrate=   0.8kbits/s    frame=   50 fps= 11 q=0.0 size=      67kB time=1.73 bitrate= 315.2kbits/s    frame=   56 fps= 11 q=0.0 size=     130kB time=1.94 bitrate= 548.7kbits/s    frame=   62 fps= 11 q=0.0 size=     130kB time=2.14 bitrate= 495.6kbits/s    frame=   69 fps= 11 q=0.0 size=     130kB time=2.39 bitrate= 445.3kbits/s    frame=   75 fps= 11 q=0.0 size=     130kB time=2.59 bitrate= 409.7kbits/s    frame=   83 fps= 11 q=0.0 size=     130kB time=2.87 bitrate= 370.2kbits/s    frame=   89 fps= 11 q=0.0 size=     130kB time=3.08 bitrate= 345.2kbits/s    frame=   95 fps= 11 q=0.0 size=     313kB time=3.25 bitrate= 789.8kbits/s    frame=  103 fps= 11 q=0.0 size=     376kB time=3.54 bitrate= 870.9kbits/s    frame=  111 fps= 11 q=0.0 size=     376kB time=3.83 bitrate= 805.4kbits/s    frame=  118 fps= 11 q=0.0 size=     376kB time=4.08 bitrate= 755.3kbits/s    frame=  125 fps= 11 q=0.0 size=     376kB time=4.32 bitrate= 713.0kbits/s    frame=  131 fps= 11 q=0.0 size=     376kB time=4.53 bitrate= 680.3kbits/s    frame=  138 fps= 11 q=0.0 size=     376kB time=4.77 bitrate= 645.8kbits/s    frame=  144 fps= 11 q=0.0 size=     376kB time=4.98 bitrate= 618.9kbits/s    frame=  150 fps= 11 q=0.0 size=     376kB time=5.19 bitrate= 594.1kbits/s    frame=  156 fps= 11 q=0.0 size=     621kB time=5.39 bitrate= 942.5kbits/s    frame=  163 fps= 11 q=0.0 size=     621kB time=5.64 bitrate= 902.1kbits/s    frame=  170 fps= 11 q=0.0 size=     621kB time=5.88 bitrate= 864.9kbits/s    frame=  176 fps= 11 q=0.0 size=     621kB time=6.09 bitrate= 835.4kbits/s    frame=  183 fps= 11 q=0.0 size=     621kB time=6.33 bitrate= 803.5kbits/s    frame=  189 fps= 11 q=0.0 size=     621kB time=6.53 bitrate= 778.0kbits/s    frame=  201 fps= 11 q=0.0 size=     621kB time=6.80 bitrate= 747.4kbits/s    frame=  201 fps= 11 q=0.0 Lsize=     901kB time=6.80 bitrate=1084.7kbits/s    
+video:210kB audio:683kB global headers:3kB muxing overhead 0.495025%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xfb5b20] multiple edit list entries, a/v desync might occur, patch welcome
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato22/gato22.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+  Duration: 00:00:06.94, start: 0.000000, bitrate: 6735 kb/s
+    Stream #0.0(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Video: h264 (Baseline), yuv420p, 1280x720, 6148 kb/s, PAR 65536:65536 DAR 16:9, 28.92 fps, 90k tbn
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+[libx264 @ 0xfbdcc0] using SAR=1/1
+[libx264 @ 0xfbdcc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0xfbdcc0] profile High, level 3.1
+[libx264 @ 0xfbdcc0] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/gato22/gato222.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 1948-01-02 06:15:31
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 683083.00 tbn, 28.92 tbc
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 1948-01-02 06:15:31
+Stream mapping:
+  Stream #0:1 -> #0:0 (h264 -> libx264)
+  Stream #0:0 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   46 fps=  0 q=0.0 size=       0kB time=1.56 bitrate=   0.2kbits/s    frame=   53 fps= 40 q=29.0 size=     169kB time=0.03 bitrate=40025.3kbits/s    frame=   66 fps= 33 q=29.0 size=     393kB time=0.48 bitrate=6646.9kbits/s    frame=   78 fps= 31 q=29.0 size=     600kB time=0.90 bitrate=5471.6kbits/s    frame=   89 fps= 27 q=29.0 size=     858kB time=1.28 bitrate=5496.9kbits/s    frame=   96 fps= 25 q=29.0 size=    1016kB time=1.52 bitrate=5472.0kbits/s    frame=  104 fps= 24 q=29.0 size=    1170kB time=1.80 bitrate=5329.0kbits/s    frame=  113 fps= 22 q=29.0 size=    1369kB time=2.11 bitrate=5316.1kbits/s    frame=  122 fps= 22 q=29.0 size=    1542kB time=2.42 bitrate=5218.5kbits/s    frame=  130 fps= 21 q=29.0 size=    1730kB time=2.70 bitrate=5254.4kbits/s    frame=  142 fps= 21 q=29.0 size=    1878kB time=3.11 bitrate=4945.3kbits/s    frame=  148 fps= 20 q=29.0 size=    2065kB time=3.32 bitrate=5095.9kbits/s    frame=  157 fps= 20 q=29.0 size=    2275kB time=3.63 bitrate=5133.7kbits/s    frame=  163 fps= 19 q=29.0 size=    2408kB time=3.84 bitrate=5139.5kbits/s    frame=  170 fps= 19 q=27.0 size=    2561kB time=4.08 bitrate=5141.7kbits/s    frame=  178 fps= 19 q=29.0 size=    2790kB time=4.36 bitrate=5247.2kbits/s    frame=  185 fps= 18 q=29.0 size=    2937kB time=4.60 bitrate=5232.2kbits/s    frame=  192 fps= 18 q=27.0 size=    3081kB time=4.84 bitrate=5213.7kbits/s    frame=  201 fps= 14 q=32766.0 Lsize=    4337kB time=6.73 bitrate=5280.7kbits/s    
+video:3166kB audio:132kB global headers:0kB muxing overhead 31.494664%
+[libx264 @ 0xfbdcc0] frame I:28    Avg QP:22.25  size: 30011
+[libx264 @ 0xfbdcc0] frame P:170   Avg QP:24.81  size: 20319
+[libx264 @ 0xfbdcc0] frame B:3     Avg QP:24.19  size:  1305
+[libx264 @ 0xfbdcc0] consecutive B-frames: 97.5%  1.0%  1.5%  0.0%
+[libx264 @ 0xfbdcc0] mb I  I16..4: 89.9%  5.1%  5.0%
+[libx264 @ 0xfbdcc0] mb P  I16..4: 64.5%  3.0%  2.0%  P16..4: 14.5%  0.8%  0.5%  0.0%  0.0%    skip:14.8%
+[libx264 @ 0xfbdcc0] mb B  I16..4:  2.8%  1.5%  0.0%  B16..8:  6.8%  0.8%  0.0%  direct: 0.0%  skip:88.1%  L0:74.9% L1:24.0% BI: 1.2%
+[libx264 @ 0xfbdcc0] 8x8 transform intra:4.5% inter:22.2%
+[libx264 @ 0xfbdcc0] coded y,uvDC,uvAC intra: 63.3% 68.0% 30.6% inter: 25.1% 23.9% 9.3%
+[libx264 @ 0xfbdcc0] i16 v,h,dc,p: 27% 19% 52%  2%
+[libx264 @ 0xfbdcc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 17% 51%  5%  2%  1%  2%  2%  4%
+[libx264 @ 0xfbdcc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 26% 40%  1%  1%  0%  1%  1%  1%
+[libx264 @ 0xfbdcc0] i8c dc,h,v,p: 66% 14% 20%  0%
+[libx264 @ 0xfbdcc0] Weighted P-Frames: Y:1.2% UV:0.0%
+[libx264 @ 0xfbdcc0] ref P L0: 81.3%  8.5%  7.6%  2.5%  0.0%
+[libx264 @ 0xfbdcc0] ref B L0: 54.6% 45.0%  0.5%
+[libx264 @ 0xfbdcc0] ref B L1: 68.2% 31.8%
+[libx264 @ 0xfbdcc0] kb/s:4948.28
+[2015-11-23 04:09:28,571: INFO/MainProcess] Task apps.feitube.tasks.video_encode[7dc3f03b-a63b-45fa-a1b8-788d55037ce7] succeeded in 62.055286632996285s: None
+[2015-11-23 05:44:50,793: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-23 05:44:50,865: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7ff0d0153a58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-23 17:36:02,579: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-23 17:36:02,595: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-23 17:36:03,603: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 17:36:03,616: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 17:36:03,617: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-23 23:17:05,066: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-23 23:17:05,082: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-23 23:17:06,089: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 23:17:06,104: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-23 23:17:06,104: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-24 02:18:34,619: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-24 02:18:34,702: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7f1a53fe3a58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-24 02:51:38,134: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-24 02:51:38,150: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-24 02:51:39,159: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 02:51:39,174: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 02:51:39,174: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-24 03:02:41,337: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-24 03:02:41,353: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-24 03:02:42,360: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 03:02:42,374: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 03:02:42,375: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-24 07:21:45,498: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-24 07:21:45,579: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7f0a1772ba58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-24 16:54:51,664: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-24 16:54:51,699: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-24 16:54:52,713: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 16:54:52,750: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 16:54:52,752: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-24 22:35:48,056: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-24 22:35:48,146: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7fd57c843a58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-24 23:39:14,009: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-24 23:39:14,025: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-24 23:39:15,032: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 23:39:15,047: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-24 23:39:15,047: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-24 23:41:50,076: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-24 23:41:50,164: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7fcfe99eba58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-25 03:55:58,879: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-25 03:55:58,895: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-25 03:55:59,903: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 03:55:59,920: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 03:55:59,921: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-25 11:10:56,582: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-25 11:10:56,668: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7f9c4039ba58
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-25 17:57:29,553: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-25 17:57:29,570: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-25 17:57:30,577: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 17:57:30,591: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 17:57:30,592: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-25 18:36:41,146: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-25 18:36:41,228: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7f98486e3a90
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-25 20:25:31,528: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-25 20:25:31,562: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-25 20:25:32,576: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 20:25:32,606: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-25 20:25:32,609: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-26 02:11:53,392: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 278, in start
+    blueprint.start(self)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/bootsteps.py", line 123, in start
+    step.start(parent)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/consumer.py", line 821, in start
+    c.loop(*c.loop_args())
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/worker/loops.py", line 76, in asynloop
+    next(loop)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/async/hub.py", line 267, in create_loop
+    tick_callback()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 947, in on_poll_start
+    cycle_poll_start()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 301, in on_poll_start
+    self._register_BRPOP(channel)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 284, in _register_BRPOP
+    self._register(*ident)
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/kombu/transport/redis.py", line 269, in _register
+    client.connection.connect()
+  File "/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+[2015-11-26 02:11:53,473: ERROR/MainProcess] consumer: Cannot connect to redis://localhost:6379/0: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds...
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@diego-K55N v3.1.19 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.16.0-37-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         hello_django:0x7f67c765ba90
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . apps.feitube.tasks.test
+  . apps.feitube.tasks.video_encode
+
+[2015-11-26 04:11:48,316: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2015-11-26 04:11:48,332: INFO/MainProcess] mingle: searching for neighbors
+[2015-11-26 04:11:49,340: INFO/MainProcess] mingle: all alone
+/home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-26 04:11:49,354: WARNING/MainProcess] /home/diego/Documentos/repositorios/fei-tube/env/lib/python3.4/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-11-26 04:11:49,354: WARNING/MainProcess] celery@diego-K55N ready.
+[2015-11-26 05:47:44,196: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[072d1f27-c53f-4139-8f81-023bb43c4c73]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/celular/celular.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.15.102
+  Duration: 00:00:09.84, start: 0.000000, bitrate: 764 kb/s
+    Stream #0.0(und): Video: h264 (Constrained Baseline), yuv420p, 360x640, 704 kb/s, 19 fps, 19 tbr, 19456 tbn, 38 tbc
+    Stream #0.1(und): Audio: aac, 44100 Hz, stereo, fltp, 55 kb/s
+[libvpx @ 0x19741a0] v1.3.0
+Output #0, webm, to 'media/videos/celular/celular.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf54.20.4
+    Stream #0.0(und): Video: libvpx, yuv420p, 360x640, q=-1--1, 200 kb/s, 1k tbn, 19456 tbc
+    Stream #0.1(und): Audio: libvorbis, 44100 Hz, stereo, fltp
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    3 fps=  0 q=0.0 size=       4kB time=0.04 bitrate= 935.6kbits/s    frame=    6 fps=  5 q=0.0 size=       4kB time=0.18 bitrate= 199.7kbits/s    frame=    8 fps=  5 q=0.0 size=       4kB time=0.30 bitrate= 118.5kbits/s    frame=   10 fps=  4 q=0.0 size=      36kB time=0.42 bitrate= 703.8kbits/s    frame=   11 fps=  4 q=0.0 size=      36kB time=0.49 bitrate= 607.5kbits/s    frame=   13 fps=  4 q=0.0 size=      36kB time=0.61 bitrate= 488.8kbits/s    frame=   15 fps=  3 q=0.0 size=      36kB time=0.70 bitrate= 424.1kbits/s    frame=   18 fps=  4 q=0.0 size=      36kB time=0.86 bitrate= 347.4kbits/s    frame=   20 fps=  4 q=0.0 size=      36kB time=0.93 bitrate= 320.4kbits/s    frame=   23 fps=  4 q=0.0 size=      36kB time=1.13 bitrate= 263.4kbits/s    frame=   26 fps=  3 q=0.0 size=      36kB time=1.29 bitrate= 230.1kbits/s    frame=   30 fps=  4 q=0.0 size=      36kB time=1.47 bitrate= 202.0kbits/s    frame=   33 fps=  4 q=0.0 size=      68kB time=1.61 bitrate= 347.1kbits/s    frame=   36 fps=  4 q=0.0 size=      68kB time=1.77 bitrate= 317.2kbits/s    frame=   40 fps=  4 q=0.0 size=      68kB time=1.97 bitrate= 284.6kbits/s    frame=   44 fps=  4 q=0.0 size=      68kB time=2.20 bitrate= 254.0kbits/s    frame=   47 fps=  4 q=0.0 size=      68kB time=2.34 bitrate= 239.6kbits/s    frame=   52 fps=  4 q=0.0 size=     100kB time=2.62 bitrate= 313.5kbits/s    frame=   54 fps=  4 q=0.0 size=     100kB time=2.76 bitrate= 297.9kbits/s    frame=   58 fps=  4 q=0.0 size=     100kB time=2.96 bitrate= 277.3kbits/s    frame=   62 fps=  4 q=0.0 size=     100kB time=3.18 bitrate= 258.5kbits/s    frame=   66 fps=  4 q=0.0 size=     100kB time=3.39 bitrate= 242.4kbits/s    frame=   70 fps=  4 q=0.0 size=     132kB time=3.59 bitrate= 302.1kbits/s    frame=   74 fps=  5 q=0.0 size=     132kB time=3.77 bitrate= 287.3kbits/s    frame=   75 fps=  4 q=0.0 size=     132kB time=3.88 bitrate= 279.6kbits/s    frame=   79 fps=  5 q=0.0 size=     132kB time=4.04 bitrate= 268.7kbits/s    frame=   82 fps=  5 q=0.0 size=     132kB time=4.19 bitrate= 258.7kbits/s    frame=   86 fps=  5 q=0.0 size=     132kB time=4.44 bitrate= 244.1kbits/s    frame=   89 fps=  5 q=0.0 size=     164kB time=4.61 bitrate= 292.0kbits/s    frame=   93 fps=  5 q=0.0 size=     164kB time=4.78 bitrate= 281.8kbits/s    frame=   95 fps=  5 q=0.0 size=     164kB time=4.92 bitrate= 273.7kbits/s    frame=   99 fps=  5 q=0.0 size=     176kB time=5.14 bitrate= 281.1kbits/s    frame=  102 fps=  5 q=0.0 size=     176kB time=5.24 bitrate= 275.7kbits/s    frame=  105 fps=  5 q=0.0 size=     176kB time=5.42 bitrate= 266.5kbits/s    frame=  109 fps=  5 q=0.0 size=     176kB time=5.63 bitrate= 256.6kbits/s    frame=  112 fps=  5 q=0.0 size=     176kB time=5.77 bitrate= 250.2kbits/s    frame=  116 fps=  5 q=0.0 size=     208kB time=6.00 bitrate= 284.2kbits/s    frame=  117 fps=  5 q=0.0 size=     208kB time=6.08 bitrate= 280.6kbits/s    frame=  121 fps=  5 q=0.0 size=     208kB time=6.23 bitrate= 273.8kbits/s    frame=  124 fps=  5 q=0.0 size=     208kB time=6.46 bitrate= 264.1kbits/s    frame=  127 fps=  5 q=0.0 size=     208kB time=6.55 bitrate= 260.3kbits/s    frame=  129 fps=  5 q=0.0 size=     208kB time=6.69 bitrate= 254.9kbits/s    frame=  131 fps=  5 q=0.0 size=     239kB time=6.75 bitrate= 289.4kbits/s    frame=  135 fps=  5 q=0.0 size=     239kB time=6.98 bitrate= 279.9kbits/s    frame=  136 fps=  5 q=0.0 size=     239kB time=7.08 bitrate= 276.3kbits/s    frame=  140 fps=  5 q=0.0 size=     239kB time=7.23 bitrate= 270.3kbits/s    frame=  142 fps=  5 q=0.0 size=     239kB time=7.35 bitrate= 266.0kbits/s    frame=  145 fps=  5 q=0.0 size=     239kB time=7.51 bitrate= 260.3kbits/s    frame=  149 fps=  5 q=0.0 size=     271kB time=7.71 bitrate= 287.5kbits/s    frame=  150 fps=  5 q=0.0 size=     271kB time=7.76 bitrate= 285.8kbits/s    frame=  154 fps=  5 q=0.0 size=     271kB time=7.97 bitrate= 278.3kbits/s    frame=  157 fps=  5 q=0.0 size=     271kB time=8.13 bitrate= 272.7kbits/s    frame=  159 fps=  5 q=0.0 size=     271kB time=8.25 bitrate= 268.8kbits/s    frame=  161 fps=  5 q=0.0 size=     271kB time=8.34 bitrate= 265.9kbits/s    frame=  164 fps=  5 q=0.0 size=     271kB time=8.50 bitrate= 260.8kbits/s    frame=  166 fps=  5 q=0.0 size=     303kB time=8.60 bitrate= 288.5kbits/s    frame=  168 fps=  5 q=0.0 size=     303kB time=8.71 bitrate= 284.6kbits/s    frame=  172 fps=  5 q=0.0 size=     303kB time=8.92 bitrate= 278.0kbits/s    frame=  176 fps=  5 q=0.0 size=     303kB time=9.13 bitrate= 271.6kbits/s    frame=  178 fps=  5 q=0.0 size=     303kB time=9.29 bitrate= 266.8kbits/s    frame=  179 fps=  4 q=0.0 size=     303kB time=9.35 bitrate= 265.3kbits/s    frame=  182 fps=  4 q=0.0 size=     303kB time=9.51 bitrate= 260.8kbits/s    frame=  187 fps=  4 q=0.0 size=     335kB time=9.77 bitrate= 280.6kbits/s    frame=  187 fps=  4 q=0.0 Lsize=     343kB time=9.79 bitrate= 286.8kbits/s    
+video:239kB audio:91kB global headers:4kB muxing overhead 2.539582%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/celular/celular.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.15.102
+  Duration: 00:00:09.84, start: 0.000000, bitrate: 764 kb/s
+    Stream #0.0(und): Video: h264 (Constrained Baseline), yuv420p, 360x640, 704 kb/s, 19 fps, 19 tbr, 19456 tbn, 38 tbc
+    Stream #0.1(und): Audio: aac, 44100 Hz, stereo, fltp, 55 kb/s
+[flac @ 0x24657c0] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/celular/celular.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf54.20.4
+    Stream #0.0(und): Video: libtheora, yuv420p, 360x640, q=2-31, 200 kb/s, 19 tbn, 19 tbc
+    Stream #0.1(und): Audio: flac, 44100 Hz, stereo, s32, 200 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    8 fps=  0 q=0.0 size=       0kB time=0.42 bitrate=   2.8kbits/s    frame=   17 fps= 17 q=0.0 size=       0kB time=0.89 bitrate=   1.3kbits/s    frame=   25 fps= 16 q=0.0 size=       0kB time=1.32 bitrate=   0.9kbits/s    frame=   33 fps= 16 q=0.0 size=       0kB time=1.74 bitrate=   0.7kbits/s    frame=   42 fps= 16 q=0.0 size=      65kB time=2.21 bitrate= 242.6kbits/s    frame=   51 fps= 17 q=0.0 size=      65kB time=2.68 bitrate= 199.8kbits/s    frame=   59 fps= 16 q=0.0 size=     128kB time=3.11 bitrate= 338.0kbits/s    frame=   69 fps= 17 q=0.0 size=     128kB time=3.63 bitrate= 289.0kbits/s    frame=   77 fps= 16 q=0.0 size=     128kB time=4.05 bitrate= 259.0kbits/s    frame=   86 fps= 17 q=0.0 size=     312kB time=4.53 bitrate= 563.8kbits/s    frame=   94 fps= 17 q=0.0 size=     312kB time=4.95 bitrate= 515.8kbits/s    frame=  103 fps= 17 q=0.0 size=     374kB time=5.42 bitrate= 565.6kbits/s    frame=  112 fps= 17 q=0.0 size=     374kB time=5.89 bitrate= 520.1kbits/s    frame=  121 fps= 17 q=0.0 size=     374kB time=6.37 bitrate= 481.4kbits/s    frame=  129 fps= 17 q=0.0 size=     374kB time=6.79 bitrate= 451.6kbits/s    frame=  139 fps= 17 q=0.0 size=     557kB time=7.32 bitrate= 624.2kbits/s    frame=  149 fps= 17 q=0.0 size=     557kB time=7.84 bitrate= 582.3kbits/s    frame=  159 fps= 17 q=0.0 size=     557kB time=8.37 bitrate= 545.7kbits/s    frame=  169 fps= 17 q=0.0 size=     741kB time=8.89 bitrate= 682.6kbits/s    frame=  178 fps= 17 q=0.0 size=     741kB time=9.37 bitrate= 648.1kbits/s    frame=  187 fps= 17 q=0.0 size=     804kB time=9.82 bitrate= 670.5kbits/s    frame=  187 fps= 17 q=0.0 Lsize=     969kB time=9.82 bitrate= 808.0kbits/s    
+video:251kB audio:710kB global headers:3kB muxing overhead 0.486595%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/celular/celular.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.15.102
+  Duration: 00:00:09.84, start: 0.000000, bitrate: 764 kb/s
+    Stream #0.0(und): Video: h264 (Constrained Baseline), yuv420p, 360x640, 704 kb/s, 19 fps, 19 tbr, 19456 tbn, 38 tbc
+    Stream #0.1(und): Audio: aac, 44100 Hz, stereo, fltp, 55 kb/s
+[libx264 @ 0x245f1a0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x245f1a0] profile High, level 2.2
+[libx264 @ 0x245f1a0] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=19 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/celular/celular2.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf54.20.4
+    Stream #0.0(und): Video: libx264, yuv420p, 360x640, q=-1--1, 19 tbn, 19 tbc
+    Stream #0.1(und): Audio: aac, 44100 Hz, stereo, fltp, 200 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   46 fps=  0 q=0.0 size=       0kB time=2.39 bitrate=   0.2kbits/s    frame=   62 fps= 51 q=27.0 size=      52kB time=0.53 bitrate= 809.0kbits/s    frame=   76 fps= 43 q=27.0 size=      99kB time=1.26 bitrate= 639.7kbits/s    frame=   89 fps= 39 q=27.0 size=     144kB time=1.95 bitrate= 605.0kbits/s    frame=  102 fps= 36 q=27.0 size=     186kB time=2.63 bitrate= 580.4kbits/s    frame=  112 fps= 34 q=27.0 size=     220kB time=3.16 bitrate= 569.5kbits/s    frame=  124 fps= 32 q=27.0 size=     262kB time=3.79 bitrate= 565.8kbits/s    frame=  140 fps= 31 q=27.0 size=     316kB time=4.63 bitrate= 558.4kbits/s    frame=  155 fps= 31 q=27.0 size=     365kB time=5.42 bitrate= 552.3kbits/s    frame=  171 fps= 30 q=27.0 size=     416kB time=6.26 bitrate= 543.6kbits/s    frame=  182 fps= 30 q=27.0 size=     465kB time=6.84 bitrate= 556.6kbits/s    frame=  187 fps= 24 q=32763.0 Lsize=     733kB time=9.74 bitrate= 616.9kbits/s    
+video:335kB audio:225kB global headers:0kB muxing overhead 30.865514%
+[libx264 @ 0x245f1a0] frame I:1     Avg QP:20.38  size: 19601
+[libx264 @ 0x245f1a0] frame P:70    Avg QP:22.64  size:  5067
+[libx264 @ 0x245f1a0] frame B:116   Avg QP:25.25  size:  1178
+[libx264 @ 0x245f1a0] consecutive B-frames: 12.3% 11.8%  9.6% 66.3%
+[libx264 @ 0x245f1a0] mb I  I16..4:  4.3% 38.7% 57.0%
+[libx264 @ 0x245f1a0] mb P  I16..4:  1.1%  4.7%  0.7%  P16..4: 53.1% 14.8%  7.2%  0.0%  0.0%    skip:18.4%
+[libx264 @ 0x245f1a0] mb B  I16..4:  0.1%  0.2%  0.0%  B16..8: 49.9%  2.4%  0.4%  direct: 1.5%  skip:45.6%  L0:45.7% L1:51.5% BI: 2.8%
+[libx264 @ 0x245f1a0] 8x8 transform intra:66.3% inter:68.5%
+[libx264 @ 0x245f1a0] coded y,uvDC,uvAC intra: 63.2% 87.9% 49.4% inter: 15.7% 26.9% 0.9%
+[libx264 @ 0x245f1a0] i16 v,h,dc,p: 36% 17% 19% 29%
+[libx264 @ 0x245f1a0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 16% 20%  5%  7%  9%  7%  7%  7%
+[libx264 @ 0x245f1a0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 15% 12%  6%  9% 10%  6%  7%  4%
+[libx264 @ 0x245f1a0] i8c dc,h,v,p: 38% 19% 21% 22%
+[libx264 @ 0x245f1a0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x245f1a0] ref P L0: 68.6% 12.4% 15.0%  4.0%
+[libx264 @ 0x245f1a0] ref B L0: 92.3%  6.8%  0.9%
+[libx264 @ 0x245f1a0] ref B L1: 96.3%  3.7%
+[libx264 @ 0x245f1a0] kb/s:415.34
+[2015-11-26 05:48:45,805: INFO/MainProcess] Task apps.feitube.tasks.video_encode[072d1f27-c53f-4139-8f81-023bb43c4c73] succeeded in 61.60516021900003s: None
+[2015-11-26 07:14:48,334: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[1d292a3e-110d-47fe-bea3-9a9b19fe25e0]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/primer-video/primer-video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+  Duration: 00:00:04.61, start: 0.000000, bitrate: 10772 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9944 kb/s, PAR 65536:65536 DAR 16:9, 29.89 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+[libvpx @ 0xeb6840] v1.3.0
+Output #0, webm, to 'media/videos/primer-video/primer-video.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=      36kB time=0.08 bitrate=3867.6kbits/s    frame=    8 fps=  5 q=0.0 size=      36kB time=0.22 bitrate=1341.5kbits/s    frame=   12 fps=  5 q=0.0 size=      36kB time=0.30 bitrate= 979.6kbits/s    frame=   15 fps=  5 q=0.0 size=      36kB time=0.41 bitrate= 724.6kbits/s    frame=   19 fps=  5 q=0.0 size=      36kB time=0.54 bitrate= 552.5kbits/s    frame=   23 fps=  6 q=0.0 size=      36kB time=0.69 bitrate= 432.9kbits/s    frame=   28 fps=  6 q=0.0 size=      36kB time=0.84 bitrate= 355.8kbits/s    frame=   32 fps=  6 q=0.0 size=      68kB time=0.99 bitrate= 567.3kbits/s    frame=   36 fps=  6 q=0.0 size=      68kB time=1.11 bitrate= 502.2kbits/s    frame=   41 fps=  6 q=0.0 size=      68kB time=1.28 bitrate= 435.8kbits/s    frame=   43 fps=  6 q=0.0 size=      68kB time=1.35 bitrate= 415.1kbits/s    frame=   47 fps=  6 q=0.0 size=      68kB time=1.48 bitrate= 379.1kbits/s    frame=   51 fps=  6 q=0.0 size=      68kB time=1.60 bitrate= 348.9kbits/s    frame=   55 fps=  6 q=0.0 size=      68kB time=1.76 bitrate= 319.1kbits/s    frame=   59 fps=  6 q=0.0 size=      68kB time=1.88 bitrate= 297.4kbits/s    frame=   62 fps=  6 q=0.0 size=      68kB time=1.97 bitrate= 284.5kbits/s    frame=   64 fps=  6 q=0.0 size=     100kB time=2.05 bitrate= 400.4kbits/s    frame=   68 fps=  6 q=0.0 size=     100kB time=2.18 bitrate= 376.9kbits/s    frame=   71 fps=  6 q=0.0 size=     100kB time=2.29 bitrate= 359.3kbits/s    frame=   75 fps=  6 q=0.0 size=     100kB time=2.42 bitrate= 340.3kbits/s    frame=   78 fps=  6 q=0.0 size=     100kB time=2.50 bitrate= 328.7kbits/s    frame=   83 fps=  6 q=0.0 size=     100kB time=2.67 bitrate= 307.7kbits/s    frame=   85 fps=  6 q=0.0 size=     100kB time=2.74 bitrate= 300.5kbits/s    frame=   89 fps=  6 q=0.0 size=     100kB time=2.89 bitrate= 285.0kbits/s    frame=   93 fps=  6 q=0.0 size=     100kB time=3.01 bitrate= 272.8kbits/s    frame=   97 fps=  6 q=0.0 size=     132kB time=3.14 bitrate= 345.2kbits/s    frame=   99 fps=  6 q=0.0 size=     132kB time=3.21 bitrate= 338.3kbits/s    frame=  102 fps=  6 q=0.0 size=     132kB time=3.31 bitrate= 327.4kbits/s    frame=  105 fps=  6 q=0.0 size=     132kB time=3.42 bitrate= 317.1kbits/s    frame=  108 fps=  6 q=0.0 size=     132kB time=3.50 bitrate= 309.4kbits/s    frame=  111 fps=  6 q=0.0 size=     132kB time=3.61 bitrate= 300.3kbits/s    frame=  115 fps=  6 q=0.0 size=     132kB time=3.74 bitrate= 290.0kbits/s    frame=  119 fps=  6 q=0.0 size=     164kB time=3.89 bitrate= 346.3kbits/s    frame=  123 fps=  6 q=0.0 size=     164kB time=4.02 bitrate= 335.3kbits/s    frame=  127 fps=  6 q=0.0 size=     164kB time=4.14 bitrate= 324.9kbits/s    frame=  129 fps=  6 q=0.0 size=     164kB time=4.21 bitrate= 320.0kbits/s    frame=  134 fps=  6 q=0.0 size=     178kB time=4.38 bitrate= 333.8kbits/s    frame=  138 fps=  6 q=0.0 size=     178kB time=4.46 bitrate= 327.4kbits/s    frame=  138 fps=  6 q=0.0 Lsize=     193kB time=4.53 bitrate= 349.1kbits/s    
+video:135kB audio:50kB global headers:4kB muxing overhead 1.990533%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/primer-video/primer-video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+  Duration: 00:00:04.61, start: 0.000000, bitrate: 10772 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9944 kb/s, PAR 65536:65536 DAR 16:9, 29.89 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+[flac @ 0x1743e60] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/primer-video/primer-video.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 29.89 tbn, 29.89 tbc
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    4 fps=  0 q=0.0 size=       0kB time=0.13 bitrate=   8.9kbits/s    frame=    9 fps=  8 q=0.0 size=       0kB time=0.30 bitrate=   4.0kbits/s    frame=   15 fps=  9 q=0.0 size=       0kB time=0.50 bitrate=   2.4kbits/s    frame=   20 fps=  9 q=0.0 size=       0kB time=0.67 bitrate=   1.8kbits/s    frame=   26 fps=  9 q=0.0 size=       0kB time=0.87 bitrate=   1.4kbits/s    frame=   31 fps=  9 q=0.0 size=       0kB time=1.04 bitrate=   1.1kbits/s    frame=   37 fps= 10 q=0.0 size=      66kB time=1.24 bitrate= 439.8kbits/s    frame=   43 fps= 10 q=0.0 size=     130kB time=1.44 bitrate= 738.5kbits/s    frame=   50 fps= 10 q=0.0 size=     130kB time=1.67 bitrate= 635.1kbits/s    frame=   56 fps= 10 q=0.0 size=     130kB time=1.87 bitrate= 567.1kbits/s    frame=   63 fps= 10 q=0.0 size=     130kB time=2.11 bitrate= 504.1kbits/s    frame=   69 fps= 10 q=0.0 size=     130kB time=2.31 bitrate= 460.2kbits/s    frame=   75 fps= 10 q=0.0 size=     130kB time=2.51 bitrate= 423.4kbits/s    frame=   81 fps= 11 q=0.0 size=     130kB time=2.71 bitrate= 392.1kbits/s    frame=   88 fps= 11 q=0.0 size=     130kB time=2.94 bitrate= 360.9kbits/s    frame=   94 fps= 11 q=0.0 size=     506kB time=3.14 bitrate=1317.5kbits/s    frame=  100 fps= 11 q=0.0 size=     569kB time=3.35 bitrate=1393.4kbits/s    frame=  106 fps= 11 q=0.0 size=     569kB time=3.55 bitrate=1314.5kbits/s    frame=  113 fps= 11 q=0.0 size=     569kB time=3.78 bitrate=1233.1kbits/s    frame=  119 fps= 11 q=0.0 size=     569kB time=3.98 bitrate=1170.9kbits/s    frame=  126 fps= 11 q=0.0 size=     569kB time=4.22 bitrate=1105.9kbits/s    frame=  132 fps= 11 q=0.0 size=     569kB time=4.42 bitrate=1055.6kbits/s    frame=  138 fps= 11 q=0.0 Lsize=     940kB time=4.61 bitrate=1670.6kbits/s    
+video:152kB audio:779kB global headers:3kB muxing overhead 0.488938%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/primer-video/primer-video.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+  Duration: 00:00:04.61, start: 0.000000, bitrate: 10772 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9944 kb/s, PAR 65536:65536 DAR 16:9, 29.89 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+[libx264 @ 0x1c3f840] using SAR=1/1
+[libx264 @ 0x1c3f840] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x1c3f840] profile High, level 3.1
+[libx264 @ 0x1c3f840] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/primer-video/primer-video2.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 20:43:27
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 525187 tbn, 29.89 tbc
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 20:43:27
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   46 fps= 44 q=0.0 size=       0kB time=1.51 bitrate=   0.3kbits/s    frame=   53 fps= 33 q=29.0 size=      66kB time=0.03 bitrate=16280.1kbits/s    frame=   59 fps= 28 q=29.0 size=     122kB time=0.23 bitrate=4272.7kbits/s    frame=   63 fps= 24 q=29.0 size=     161kB time=0.37 bitrate=3583.0kbits/s    frame=   69 fps= 22 q=29.0 size=     230kB time=0.57 bitrate=3313.4kbits/s    frame=   77 fps= 21 q=29.0 size=     288kB time=0.84 bitrate=2821.4kbits/s    frame=   82 fps= 19 q=29.0 size=     325kB time=1.00 bitrate=2649.7kbits/s    frame=   89 fps= 18 q=29.0 size=     373kB time=1.24 bitrate=2468.1kbits/s    frame=   97 fps= 17 q=29.0 size=     421kB time=1.51 bitrate=2292.2kbits/s    frame=  105 fps= 17 q=29.0 size=     468kB time=1.77 bitrate=2163.9kbits/s    frame=  113 fps= 16 q=29.0 size=     526kB time=2.04 bitrate=2109.8kbits/s    frame=  121 fps= 16 q=29.0 size=     590kB time=2.31 bitrate=2093.0kbits/s    frame=  129 fps= 16 q=29.0 size=     648kB time=2.58 bitrate=2059.5kbits/s    frame=  138 fps= 16 q=29.0 size=     707kB time=2.88 bitrate=2013.5kbits/s    frame=  138 fps= 11 q=32765.0 Lsize=    1200kB time=4.54 bitrate=2162.7kbits/s    
+video:646kB audio:98kB global headers:0kB muxing overhead 61.159456%
+[libx264 @ 0x1c3f840] frame I:2     Avg QP:23.00  size: 45256
+[libx264 @ 0x1c3f840] frame P:46    Avg QP:23.69  size: 13746
+[libx264 @ 0x1c3f840] frame B:90    Avg QP:25.97  size:  4425
+[libx264 @ 0x1c3f840] consecutive B-frames: 10.9%  2.9% 10.9% 75.4%
+[libx264 @ 0x1c3f840] mb I  I16..4: 10.8% 74.4% 14.8%
+[libx264 @ 0x1c3f840] mb P  I16..4:  3.9%  4.5%  0.2%  P16..4: 58.6% 11.1%  6.4%  0.0%  0.0%    skip:15.3%
+[libx264 @ 0x1c3f840] mb B  I16..4:  0.3%  0.3%  0.0%  B16..8: 44.6%  1.3%  0.1%  direct: 4.5%  skip:48.9%  L0:47.5% L1:51.8% BI: 0.7%
+[libx264 @ 0x1c3f840] 8x8 transform intra:58.3% inter:81.4%
+[libx264 @ 0x1c3f840] coded y,uvDC,uvAC intra: 40.3% 77.3% 16.4% inter: 14.2% 31.4% 0.0%
+[libx264 @ 0x1c3f840] i16 v,h,dc,p: 49% 26% 16% 10%
+[libx264 @ 0x1c3f840] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 15% 36%  3%  5%  6%  4%  5%  5%
+[libx264 @ 0x1c3f840] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 18% 13%  7% 10%  7%  6%  5%  6%
+[libx264 @ 0x1c3f840] i8c dc,h,v,p: 56% 22% 20%  3%
+[libx264 @ 0x1c3f840] Weighted P-Frames: Y:19.6% UV:17.4%
+[libx264 @ 0x1c3f840] ref P L0: 62.0% 17.3% 15.9%  4.7%  0.1%
+[libx264 @ 0x1c3f840] ref B L0: 87.3%  9.5%  3.1%
+[libx264 @ 0x1c3f840] ref B L1: 92.9%  7.1%
+[libx264 @ 0x1c3f840] kb/s:1942.69
+[2015-11-26 07:15:37,714: INFO/MainProcess] Task apps.feitube.tasks.video_encode[1d292a3e-110d-47fe-bea3-9a9b19fe25e0] succeeded in 49.37904097599858s: None
+[2015-11-26 11:10:57,987: INFO/MainProcess] Received task: apps.feitube.tasks.video_encode[65b54934-f310-47c7-9fdc-95e7f24a160e]
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato/gato.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+  Duration: 00:00:03.85, start: 0.000000, bitrate: 10841 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9871 kb/s, PAR 65536:65536 DAR 16:9, 29.85 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+[libvpx @ 0x1cbed40] v1.3.0
+Output #0, webm, to 'media/videos/gato/gato.webm':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libvpx, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 200 kb/s, 1k tbn, 90k tbc
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: libvorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libvpx)
+  Stream #0:1 -> #0:1 (aac -> libvorbis)
+Press ctrl-c to stop encoding
+frame=    1 fps=  0 q=0.0 size=       4kB time=10000000000.00 bitrate=   0.0kbits/s    frame=    5 fps=  4 q=0.0 size=      36kB time=0.08 bitrate=3867.6kbits/s    frame=    9 fps=  5 q=0.0 size=      36kB time=0.23 bitrate=1300.5kbits/s    frame=   12 fps=  5 q=0.0 size=      36kB time=0.33 bitrate= 916.3kbits/s    frame=   15 fps=  5 q=0.0 size=      36kB time=0.41 bitrate= 724.6kbits/s    frame=   19 fps=  5 q=0.0 size=      36kB time=0.54 bitrate= 552.5kbits/s    frame=   22 fps=  5 q=0.0 size=      36kB time=0.65 bitrate= 461.7kbits/s    frame=   25 fps=  5 q=0.0 size=      36kB time=0.75 bitrate= 396.0kbits/s    frame=   28 fps=  5 q=0.0 size=      68kB time=0.86 bitrate= 651.9kbits/s    frame=   32 fps=  5 q=0.0 size=      68kB time=0.99 bitrate= 567.3kbits/s    frame=   35 fps=  5 q=0.0 size=      68kB time=1.07 bitrate= 522.3kbits/s    frame=   39 fps=  5 q=0.0 size=      68kB time=1.22 bitrate= 458.6kbits/s    frame=   42 fps=  5 q=0.0 size=      68kB time=1.31 bitrate= 428.4kbits/s    frame=   45 fps=  5 q=0.0 size=      68kB time=1.41 bitrate= 396.3kbits/s    frame=   48 fps=  5 q=0.0 size=      68kB time=1.52 bitrate= 368.4kbits/s    frame=   51 fps=  5 q=0.0 size=     100kB time=1.60 bitrate= 512.2kbits/s    frame=   55 fps=  5 q=0.0 size=     100kB time=1.76 bitrate= 468.4kbits/s    frame=   58 fps=  6 q=0.0 size=     100kB time=1.84 bitrate= 446.8kbits/s    frame=   62 fps=  6 q=0.0 size=     100kB time=1.99 bitrate= 413.3kbits/s    frame=   65 fps=  5 q=0.0 size=     100kB time=2.08 bitrate= 396.2kbits/s    frame=   69 fps=  6 q=0.0 size=     100kB time=2.22 bitrate= 369.6kbits/s    frame=   72 fps=  6 q=0.0 size=     100kB time=2.31 bitrate= 356.0kbits/s    frame=   75 fps=  6 q=0.0 size=     100kB time=2.42 bitrate= 340.3kbits/s    frame=   78 fps=  6 q=0.0 size=     100kB time=2.52 bitrate= 325.8kbits/s    frame=   81 fps=  6 q=0.0 size=     132kB time=2.61 bitrate= 415.7kbits/s    frame=   84 fps=  6 q=0.0 size=     132kB time=2.71 bitrate= 399.4kbits/s    frame=   87 fps=  6 q=0.0 size=     132kB time=2.82 bitrate= 384.3kbits/s    frame=   90 fps=  6 q=0.0 size=     132kB time=2.91 bitrate= 373.0kbits/s    frame=   93 fps=  5 q=0.0 size=     132kB time=3.01 bitrate= 359.9kbits/s    frame=   97 fps=  5 q=0.0 size=     132kB time=3.14 bitrate= 345.2kbits/s    frame=  100 fps=  5 q=0.0 size=     132kB time=3.26 bitrate= 332.9kbits/s    frame=  103 fps=  5 q=0.0 size=     132kB time=3.35 bitrate= 323.5kbits/s    frame=  106 fps=  5 q=0.0 size=     164kB time=3.44 bitrate= 391.7kbits/s    frame=  109 fps=  5 q=0.0 size=     164kB time=3.54 bitrate= 379.9kbits/s    frame=  115 fps=  5 q=0.0 size=     164kB time=3.76 bitrate= 358.4kbits/s    frame=  115 fps=  5 q=0.0 Lsize=     189kB time=3.82 bitrate= 406.3kbits/s    
+video:138kB audio:44kB global headers:4kB muxing overhead 1.868752%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato/gato.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+  Duration: 00:00:03.85, start: 0.000000, bitrate: 10841 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9871 kb/s, PAR 65536:65536 DAR 16:9, 29.85 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+[flac @ 0x247f920] encoding as 24 bits-per-sample
+Output #0, ogg, to 'media/videos/gato/gato.ogv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libtheora, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=2-31, 200 kb/s, 29.85 tbn, 29.85 tbc
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: flac, 48000 Hz, stereo, s32, 200 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libtheora)
+  Stream #0:1 -> #0:1 (aac -> flac)
+Press ctrl-c to stop encoding
+frame=    5 fps=  0 q=0.0 size=       0kB time=0.17 bitrate=   7.1kbits/s    frame=   11 fps= 10 q=0.0 size=       0kB time=0.37 bitrate=   3.2kbits/s    frame=   18 fps= 11 q=0.0 size=       0kB time=0.60 bitrate=   2.0kbits/s    frame=   24 fps= 11 q=0.0 size=       0kB time=0.80 bitrate=   1.5kbits/s    frame=   31 fps= 11 q=0.0 size=      66kB time=1.04 bitrate= 523.2kbits/s    frame=   37 fps= 11 q=0.0 size=      66kB time=1.24 bitrate= 438.4kbits/s    frame=   42 fps= 11 q=0.0 size=      66kB time=1.41 bitrate= 386.2kbits/s    frame=   48 fps= 11 q=0.0 size=      66kB time=1.61 bitrate= 337.9kbits/s    frame=   55 fps= 11 q=0.0 size=      66kB time=1.84 bitrate= 294.9kbits/s    frame=   61 fps= 11 q=0.0 size=      66kB time=2.04 bitrate= 265.9kbits/s    frame=   67 fps= 11 q=0.0 size=      66kB time=2.24 bitrate= 242.1kbits/s    frame=   73 fps= 11 q=0.0 size=      66kB time=2.45 bitrate= 222.2kbits/s    frame=   79 fps= 11 q=0.0 size=      66kB time=2.65 bitrate= 205.3kbits/s    frame=   85 fps= 11 q=0.0 size=      66kB time=2.85 bitrate= 190.8kbits/s    frame=   90 fps= 11 q=0.0 size=     443kB time=3.02 bitrate=1204.5kbits/s    frame=   96 fps= 11 q=0.0 size=     443kB time=3.22 bitrate=1129.2kbits/s    frame=  102 fps= 11 q=0.0 size=     443kB time=3.42 bitrate=1062.8kbits/s    frame=  107 fps= 11 q=0.0 size=     443kB time=3.58 bitrate=1013.1kbits/s    frame=  115 fps= 11 q=0.0 size=     443kB time=3.84 bitrate= 945.8kbits/s    frame=  115 fps= 11 q=0.0 Lsize=     704kB time=3.84 bitrate=1502.4kbits/s    
+video:132kB audio:565kB global headers:3kB muxing overhead 0.504933%
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'media/videos/gato/gato.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+  Duration: 00:00:03.85, start: 0.000000, bitrate: 10841 kb/s
+    Stream #0.0(eng): Video: h264 (High), yuv420p, 1280x720, 9871 kb/s, PAR 65536:65536 DAR 16:9, 29.85 fps, 90k tbn
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 129 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+[libx264 @ 0x22a1d40] using SAR=1/1
+[libx264 @ 0x22a1d40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA4 FMA3 LZCNT BMI1
+[libx264 @ 0x22a1d40] profile High, level 3.1
+[libx264 @ 0x22a1d40] 264 - core 142 r2389 956c8d8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2014 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.25 aq=1:1.00
+Output #0, mp4, to 'media/videos/gato/gato2.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: isom3gp4
+    creation_time   : 2015-04-03 18:15:16
+    encoder         : Lavf54.20.4
+    Stream #0.0(eng): Video: libx264, yuv420p, 1280x720 [PAR 65536:65536 DAR 16:9], q=-1--1, 646875 tbn, 29.85 tbc
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+    Stream #0.1(eng): Audio: aac, 48000 Hz, stereo, fltp, 200 kb/s
+    Metadata:
+      creation_time   : 2015-04-03 18:15:16
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 -> libx264)
+  Stream #0:1 -> #0:1 (aac -> aac)
+Press ctrl-c to stop encoding
+frame=   24 fps=  0 q=0.0 size=       0kB time=0.77 bitrate=   0.5kbits/s    frame=   46 fps= 37 q=0.0 size=       0kB time=1.51 bitrate=   0.3kbits/s    frame=   54 fps= 28 q=29.0 size=      99kB time=0.07 bitrate=12108.2kbits/s    frame=   57 fps= 23 q=29.0 size=     176kB time=0.17 bitrate=8590.4kbits/s    frame=   63 fps= 20 q=29.0 size=     333kB time=0.37 bitrate=7399.1kbits/s    frame=   70 fps= 18 q=29.0 size=     509kB time=0.60 bitrate=6908.0kbits/s    frame=   75 fps= 17 q=29.0 size=     635kB time=0.77 bitrate=6753.0kbits/s    frame=   79 fps= 16 q=29.0 size=     720kB time=0.90 bitrate=6519.3kbits/s    frame=   84 fps= 15 q=29.0 size=     852kB time=1.07 bitrate=6510.5kbits/s    frame=   88 fps= 15 q=29.0 size=     955kB time=1.21 bitrate=6486.6kbits/s    frame=   94 fps= 14 q=29.0 size=    1125kB time=1.41 bitrate=6546.7kbits/s    frame=   99 fps= 14 q=29.0 size=    1256kB time=1.57 bitrate=6531.9kbits/s    frame=  104 fps= 14 q=29.0 size=    1380kB time=1.74 bitrate=6486.9kbits/s    frame=  115 fps= 13 q=29.0 size=    1665kB time=2.11 bitrate=6461.7kbits/s    frame=  115 fps=  9 q=32763.0 Lsize=    2944kB time=3.79 bitrate=6370.0kbits/s    
+video:1621kB audio:83kB global headers:0kB muxing overhead 72.756921%
+[libx264 @ 0x22a1d40] frame I:2     Avg QP:24.12  size: 43216
+[libx264 @ 0x22a1d40] frame P:91    Avg QP:25.46  size: 27332
+[libx264 @ 0x22a1d40] frame B:22    Avg QP:26.71  size: 15919
+[libx264 @ 0x22a1d40] consecutive B-frames: 61.7% 38.3%  0.0%  0.0%
+[libx264 @ 0x22a1d40] mb I  I16..4: 18.1% 76.1%  5.8%
+[libx264 @ 0x22a1d40] mb P  I16..4: 13.0% 14.2%  0.7%  P16..4: 51.3% 10.3%  4.9%  0.0%  0.0%    skip: 5.6%
+[libx264 @ 0x22a1d40] mb B  I16..4:  1.4%  1.0%  0.0%  B16..8: 47.0%  3.0%  0.5%  direct:27.0%  skip:20.0%  L0:54.1% L1:41.2% BI: 4.7%
+[libx264 @ 0x22a1d40] 8x8 transform intra:52.5% inter:75.4%
+[libx264 @ 0x22a1d40] coded y,uvDC,uvAC intra: 36.6% 96.4% 87.3% inter: 20.8% 78.3% 42.2%
+[libx264 @ 0x22a1d40] i16 v,h,dc,p: 29% 13% 14% 44%
+[libx264 @ 0x22a1d40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 13% 28%  5%  7%  7%  7%  6%  5%
+[libx264 @ 0x22a1d40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 14% 23%  7% 11%  7% 10%  5%  6%
+[libx264 @ 0x22a1d40] i8c dc,h,v,p: 66% 12% 13%  9%
+[libx264 @ 0x22a1d40] Weighted P-Frames: Y:2.2% UV:2.2%
+[libx264 @ 0x22a1d40] ref P L0: 75.7%  8.6% 10.5%  5.1%  0.1%
+[libx264 @ 0x22a1d40] ref B L0: 94.3%  5.7%
+[libx264 @ 0x22a1d40] kb/s:6070.92
+[2015-11-26 11:11:43,249: INFO/MainProcess] Task apps.feitube.tasks.video_encode[65b54934-f310-47c7-9fdc-95e7f24a160e] succeeded in 45.260196539999015s: None

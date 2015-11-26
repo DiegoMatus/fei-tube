@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static from static %}
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -20,7 +20,7 @@
     <header id="header">
       <section class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper  orange lighten-2">
+          <div class="nav-wrapper orange lighten-2">
             <a href="#" class="hide-on-med-and-down grey-text text-darken-2 brand-logo">Feitube</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only"><i class="mdi-navigation-menu"></i></a>
             <ul class="right">
@@ -38,12 +38,40 @@
                 <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">new_releases</i></a></li>
                 <li class="hide-on-small-only"><a href="mobile.html"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
-                <li><a href="#"><i class="material-icons right">perm_identity</i>Login</a></li>
+                <li><a class="modal-trigger" href="#login_modal"><i class="material-icons right">perm_identity</i>Login</a></li>
               {% endif %}
             </ul>
+          </div>
         </nav>
       </section>
     </header><!-- /header -->
+
+  <!-- Modal Structure -->
+  <div id="login_modal" class="modal">
+    <div class="modal-content">
+        <h4>Login</h4>
+        <p>Ingresa tus datos</p>
+    </div>
+    <div class="row">
+      <form id="upload_form" class="col s12" action="{% url "login" %}" method="POST" >{% csrf_token %}
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Placeholder" name="username" type="text" class="validate">
+            <label for="Username">Username</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-action modal-close waves-effect waves-green" type="submit" >Aceptar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
@@ -94,22 +122,22 @@
         <div class="sidebar-header">
           {% if user.is_authenticated %}
             <figure class="sidebar-image">
-                  <img src="{% static "img/20.png" %}" alt="" class="circle responsive-img"/>
-                  <figcaption><a href="#" class="orange-text text-lighten-2 center-align">CubeDiRubik</a></figcaption>
+                  <img src="{{ user.profile.profile_picture.url }}" alt="" class="circle responsive-img"/>
+                  <figcaption><a href="#" class="orange-text text-lighten-2 center-align">{{ user.get_username }}</a></figcaption>
             </figure>
             <div class="row network">
-                <div class="col s3"><a class="white-text" href="#"><i class="fa fa-twitter fa-lg"></i></a></div>
-                <div class="col s3"><a class="white-text" href="#"><i class="fa fa-facebook fa-lg"></i></a></div>
-                <div class="col s3"><a class="white-text" href="#"><i class="fa fa-instagram fa-lg"></i></a></div>
-                <div class="col s3"><a class="white-text" href="#"><i class="fa fa-google-plus fa-lg"></i></a></div>
+                <div class="col s3"><a class="white-text" href="{{ user.profile.twitter }}"><i class="fa fa-twitter fa-lg"></i></a></div>
+                <div class="col s3"><a class="white-text" href="{{ user.profile.facebook }}"><i class="fa fa-facebook fa-lg"></i></a></div>
+                <div class="col s3"><a class="white-text" href="{{ user.profile.instagram }}"><i class="fa fa-instagram fa-lg"></i></a></div>
+                <div class="col s3"><a class="white-text" href="{{ user.profile.google }}"><i class="fa fa-google-plus fa-lg"></i></a></div>
             </div>
             <li><a href="{% url "index" %}" class="white-text">Home</a></li>
             <li><a href="{% url "upload" %}" class="white-text">Upload</a></li>
             <li><a href="#!" class="white-text">My videos</a></li>
             <li><a href="#!" class="white-text">Favorites</a></li>
             <li><a href="#!" class="white-text">Playlist</a></li>
-            <li><a href="#!" class="white-text">Transmit</a></li>
-            <li><a href="#!" class="white-text">Logout</a></li>
+            <li><a href="#" class="white-text">Stream</a></li>
+            <li><a href="{% url "logout" %}" class="white-text">Logout</a></li>
           {% else %}
             <figure class="sidebar-image">
                   <img src="static/img/20.png" alt="" class="circle responsive-img"/>
@@ -117,29 +145,37 @@
             </figure>
             <div class="row">
               <a class="waves-effect waves-light btn col s4 offset-s2" href="#" >Signup</a>
-              <a class="waves-effect waves-light btn col s4 offset-s1" href="#" >Login</a>
+              <a href="#login_modal" class="modal-trigger waves-effect waves-light btn col s4 offset-s1" >Login</a>
             </div>
             <li><a href="{% url "index" %}" class="white-text">Home</a></li>
           {% endif %}
         </div>
       </ul>
     </aside>
-  {% block content %}{% endblock %}
+
+  <section class="main row orange lighten-2 section">        
+    {% block content %}{% endblock %}
+    <div class="col s4">
+                  <a class="twitter-timeline"  href="https://twitter.com/hashtag/DevAplicacionesEnRed" data-widget-id="669795053980639232">#DevAplicacionesEnRed Tweets</a>
+    </div>
+  </section>
+
   <footer class="page-footer orange lighten-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="grey-text text-darken-3">Feitube</h5>
-          <p class="grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="grey-text text-darken-2">Videos sobre la Facultad de Estadística e
+          Informática, la Universidad Veracruzana y en general :)</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="grey-text text-darken-3">Menú</h5>
           <ul>
-            <li><a class="grey-text text-darken-2" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-darken-2" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-darken-2" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-darken-2" href="#!">Link 4</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">Home</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">Upload</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">My videos</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">Favorites</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">Playlist</a></li>
           </ul>
         </div>
       </div>
@@ -155,6 +191,7 @@
     <!--Import jQuery before materialize.js-->
     <script src="{% static "js/jquery-2.1.1.min.js" %}" type="text/javascript"></script>
     <script src="{% static "js/materialize.min.js" %}" type="text/javascript"></script>
+    <script src="http://localhost:9998/socket.io/socket.io.js"></script>
     <script src="{% static "js/scripts.js" %}" type="text/javascript"></script>
     {% block scripts %}{% endblock %}
   </body>

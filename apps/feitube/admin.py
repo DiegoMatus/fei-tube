@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.feitube.models import Profile, Video, Playlist, Rate
+from apps.feitube.models import Profile, Video, Playlist, Rate, Comment
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
@@ -15,10 +15,15 @@ class ProfileInline(admin.StackedInline):
 class UserAdmin(UserAdmin):
     inlines = (ProfileInline, )
 
+class VideoAdmin (admin.ModelAdmin):
+	list_display = ( 'title', 'tags', 'description', 'uploaded')
+	list_filter = [ 'profile' ]
+
 # Re-register UserAdmin
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
-admin.site.register(Video)
+admin.site.register(Profile)
+admin.site.register(Video, VideoAdmin)
 admin.site.register(Playlist)
 admin.site.register(Rate)
-admin.site.register(Profile)
+admin.site.register(Comment)
