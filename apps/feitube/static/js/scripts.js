@@ -8,19 +8,25 @@ function render(data){
 	var html = `<img class="col s4 m2 responsive-img circle" src="${data.profile_picture}" alt="">
 				<div class="col s8 m10">
 					<div class="row">
-						<p class="col s4">${data.username}</p>
-						<p class="col s8">${data.published}</p>
-						<p class="col s8 m10">${data.comment}</p>
+						<p class="col s12 m4">${data.username}</p>
+						<p class="col s12 m8">Publicado el ${data.published}</p>
 					</div>
-				</div>`;
+				</div>
+				<blockquote class="comment col s12">
+					${data.comment}
+				</blockquote>`;
 
 	var parentGuest = document.getElementById("messages"); 
 	var childGuest = document.createElement("li"); 
-	childGuest.class = "row"; 
+	childGuest.class = "row section"; 
 	childGuest.innerHTML = html; 
-	parentGuest.parentNode.appendChild(childGuest);
+	if (data.username != undefined) {
+		parentGuest.parentNode.appendChild(childGuest);
+	}else{
+		alert(data.comment);
+	};
+		document.getElementById('comment_body').value = '';
 	//document.getElementById('messages').parentNode.appendChild(html);
-	document.getElementById('comment_body').value = '';
 }
 
  		
@@ -34,6 +40,26 @@ $('#comment_form').on('submit', function(e){
 	return false;
 	
 });
+
+/*$('#search_form').on('submit', function(e){
+	e.preventDefault();
+	$.ajax({
+		url : '/upload/video',
+		type: 'POST',
+		data: {
+			video_title: $('#video_title').val(),
+			video_tags: $('#video_tags').val(),
+			video_description: $('#video_description').val(),
+			video_path: $('#video_source').val()
+		},
+		success : function(data){
+			alert("Tu video " + data.video_path + " se está subiendo");
+		},
+		error : function(error){
+			console.log(error);
+		}
+	});
+});*/
 
 $('.modal-trigger').leanModal();
 

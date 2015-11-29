@@ -25,9 +25,9 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only"><i class="mdi-navigation-menu"></i></a>
             <ul class="right">
               <li>
-                <form>
-                  <div class="input-field">
-                    <input id="search" type="search" required>
+                <form method="POST" action="{% url "search" %}" id="search_form">{% csrf_token %}
+                  <div class="search-wrapper input-field">
+                    <input id="search" name="search" type="search" required>
                     <label for="search"><i class="material-icons">search</i></label>
                     <i class="material-icons">close</i>
                   </div>
@@ -38,7 +38,7 @@
                 <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">new_releases</i></a></li>
                 <li class="hide-on-small-only"><a href="mobile.html"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
-                <li><a class="modal-trigger" href="#login_modal"><i class="material-icons right">perm_identity</i>Login</a></li>
+                <li class="hide-on-small-only"><a class="modal-trigger" href="#login_modal">Login</a></li>
               {% endif %}
             </ul>
           </div>
@@ -46,17 +46,18 @@
       </section>
     </header><!-- /header -->
 
-  <!-- Modal Structure -->
-  <div id="login_modal" class="modal">
-    <div class="modal-content">
+  <!-- Login Modal -->
+  <div id="login_modal" class="modal grey darken-2">
+    <div class="modal-content orange-text text-lighten-1">
         <h4>Login</h4>
         <p>Ingresa tus datos</p>
+        <div class="divider"></div>
     </div>
     <div class="row">
       <form id="upload_form" class="col s12" action="{% url "login" %}" method="POST" >{% csrf_token %}
         <div class="row">
           <div class="input-field col s6">
-            <input placeholder="Placeholder" name="username" type="text" class="validate">
+            <input name="username" type="text" class="validate">
             <label for="Username">Username</label>
           </div>
           <div class="input-field col s6">
@@ -64,8 +65,8 @@
             <label for="password">Password</label>
           </div>
         </div>
-        <div class="modal-footer">
-          <button class="modal-action modal-close waves-effect waves-green" type="submit" >Aceptar
+        <div class="modal-footer grey darken-2">
+          <button class="modal-action modal-close btn btn waves-effect waves-light" type="submit" >Aceptar
             <i class="material-icons right">send</i>
           </button>
         </div>
@@ -73,47 +74,61 @@
     </div>
   </div>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <!-- Signup Modal -->
+  <div id="signup_modal" class="modal grey darken-2">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4 class="orange-text text-lighten-1">SignUp</h4>
+      <div class="divider"></div>
     </div>
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="POST" action="{% url "signup" %}" enctype="multipart/form-data">{% csrf_token %}
       <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+        <div class="input-field col s12 m6">
+          <input id="first_name" name="first_name" type="text" class="validate">
           <label for="first_name">First Name</label>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
+        <div class="input-field col s12 m6">
+          <input id="last_name" name="last_name" type="text" class="validate">
           <label for="last_name">Last Name</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
+        <div class="input-field col s12 m6">
+          <input id="username" name="username" type="text" class="validate">
+          <label for="disabled">Username</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="email" name="email" type="email" class="validate">
+          <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+        <div class="input-field col s12 m6">
+          <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
+        <div class="input-field col s12 m6">
+          <input id="password2" name="password2" type="password" class="validate">
+          <label for="password2">Confirm Password</label>
+        </div>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
+      <div class="row modal-footer grey darken-2">
+        <div class="col s9 file-field input-field grey darken-2">
+          <div class="btn">
+            <span>Profile picture</span>
+            <input id="profile_picture_path" type="file" name="profile_picture">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+        <div class="col s2 offset-s1">      
+          <button class="modal-action modal-close btn waves-effect waves-light" type="submit" >Register<i class="material-icons right">send</i>
+          </button>
         </div>
       </div>
     </form>
   </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 
     <aside id="sidebar">
@@ -144,7 +159,7 @@
                   <figcaption><a href="#" class="orange-text text-lighten-2 center-align">Accede ahora</a></figcaption>
             </figure>
             <div class="row">
-              <a class="waves-effect waves-light btn col s4 offset-s2" href="#" >Signup</a>
+              <a class="modal-trigger waves-effect waves-light btn col s4 offset-s2" href="#signup_modal" >Signup</a>
               <a href="#login_modal" class="modal-trigger waves-effect waves-light btn col s4 offset-s1" >Login</a>
             </div>
             <li><a href="{% url "index" %}" class="white-text">Home</a></li>
@@ -153,11 +168,11 @@
       </ul>
     </aside>
 
-  <section class="main row orange lighten-2 section">        
+  <section class="main row section">        
     {% block content %}{% endblock %}
-    <div class="col s4">
-                  <a class="twitter-timeline"  href="https://twitter.com/hashtag/DevAplicacionesEnRed" data-widget-id="669795053980639232">#DevAplicacionesEnRed Tweets</a>
-    </div>
+    <aside class="col s12 m4 l4">
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/DevAplicacionesEnRed" data-widget-id="669795053980639232">#DevAplicacionesEnRed Tweets</a>
+    </aside>
   </section>
 
   <footer class="page-footer orange lighten-2">

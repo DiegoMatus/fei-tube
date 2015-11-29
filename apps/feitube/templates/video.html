@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static from static %}
+{% load social_share %}
 
 {% block style %}
 	<link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-		<div class="col s8 m6 offset-m2 l5 offset-l3">
+		<div class="col s12 m7 offset-m1 l5 offset-l3">
 			<div id="video-container" name="{{ video.slug }}" class="row">
 				<video id="my-video" height="320px" width="auto" class="col s12  video-js responsive-video" controls preload="auto" data-setup="{}">
 					<source src="{{ video.generic_path }}.mp4" type='video/mp4'>
@@ -19,7 +20,7 @@
 					</p>
 				</video>
 			</div>
-			<div class="row">
+			<div class="row orange lighten-2">
 				<h5 class="col s12 grey-text text-darken-4">{{ video.title }}</h5>
 				<div class="col s12">
 					<div class="row">
@@ -36,46 +37,54 @@
 				</div>
 			</div>	
 			<div class="divider"></div>
-			<div class="row section">
+			<div class="row section orange lighten-2">
 			    <form id="comment_form" class="col s12" method="POST">{% csrf_token %}
 					<div class="row"> 
-						  <img class="col s2 responsive-img circle" src="{{ video.profile.profile_picture.url }}" alt="ggg">   	
-						<div class="input-field col s10">
-						  <textarea id="comment_body" name="comment_body" class="materialize-textarea"></textarea>
-						  <label for="textarea1">Comment</label>
-						</div>
-					</div>
-					<div class="row right">
-						<div class="col s2">
-						  <button class="btn waves-effect waves-light" type="submit" name="action">Publicar
-						    <i class="material-icons right">send</i>
-						  </button>
-						</div>
+						{% if user.is_authenticated %}
+							<img class="col s2 responsive-img circle" src="{{ user.profile.profile_picture.url }}" alt="profile_img">   	
+							<div class="input-field col s10">
+							  <textarea id="comment_body" name="comment_body" class="materialize-textarea"></textarea>
+							  <label for="textarea1">Comment</label>
+							</div>
+							<div class="row right">
+								<div class="col s2">
+								  <button class="btn waves-effect waves-light" type="submit" name="action">Publicar
+								    <i class="material-icons right">send</i>
+								  </button>
+								</div>
+							</div>
+						{% else %}
+							<img class="col s2 responsive-img circle" src="{% static "img/20.png" %}" alt="ggg">   	
+							<div class="input-field col s10">
+							  <textarea disabled class="materialize-textarea"></textarea>
+							  <label for="textarea2">Login for comment</label>
+							</div>
+						{% endif %}
 					</div>
 			    </form>
 			</div>
-			<div class="row">
-				<div class="divider"></div>
+			<div class="divider"></div>
+			<div class="row orange lighten-2">
 				<div class="col s12">
-					<div class="row">
-						<p class="col s12">{{ video.uploaded }}</p>
-						<p class="col s12">{{ video.description }}</p>
-					</div>
+					<p class="col s12">Subido el {{ video.uploaded }}</p>
+					<p class="col s12">Descripción: {{ video.description }}</p>
 				</div>
 			</div>			
-			<div class="divider"></div>
-			<div class="row">
+			<div class="row orange lighten-2">
 				<ul id="messages" class="col s12">
 				{% for comment in comments %}
-					<li class="row">					
+					<div class="divider"></div>
+					<li class="row section">					
 						<img class="col s4 m2 responsive-img circle" src="{{ comment.profile.profile_picture.url }}" alt="">
 						<div class="col s8 m10">
 							<div class="row">
-								<p class="col s4">{{ comment.profile.user.get_username }}</p>
-								<p class="col s8">{{ comment.published }}</p>
-								<p class="col s8 m10">{{ comment.comment }}</p>
+								<p class="col s12 m4">{{ comment.profile.user.get_username }}</p>
+								<p class="col s12 m8">Publicado el {{ comment.published }}</p>
 							</div>
 						</div>
+						<blockquote class="comment col s12">
+							{{ comment.comment }}
+						</blockquote>
 					</li>
 				{% endfor %}
 				</ul>

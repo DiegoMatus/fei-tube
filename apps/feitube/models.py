@@ -25,12 +25,12 @@ class Profile(models.Model):
     apellidos, username, password que obtiene de una asociación uno a uno con
     con el modelo USER de django, además de los descritos abajo.'''
     user = models.OneToOneField(User)
-    facebook = models.URLField('Facebook', max_length=255)
-    twitter = models.URLField('Twitter', max_length=255)
-    instagram = models.URLField('Instagram', max_length=255)
-    google = models.URLField('Google +', max_length=255)
-    profile_picture = models.FileField(upload_to=get_file_path_profiles)
-    cover_picture = models.FileField(upload_to=get_file_path_covers)
+    facebook = models.URLField('Facebook', max_length=255, blank=True, null=True, default='http://localhost:8000')
+    twitter = models.URLField('Twitter', max_length=255, blank=True, null=True, default='http://localhost:8000')
+    instagram = models.URLField('Instagram', max_length=255, blank=True, null=True, default='http://localhost:8000')
+    google = models.URLField('Google +', max_length=255, blank=True, null=True, default='http://localhost:8000')
+    profile_picture = models.FileField(upload_to=get_file_path_profiles, blank=True, null=True)
+    cover_picture = models.FileField(upload_to=get_file_path_covers, blank=True, null=True)
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
 
     class Meta:
