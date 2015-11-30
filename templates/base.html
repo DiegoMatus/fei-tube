@@ -34,11 +34,11 @@
                 </form>
               </li>
               {% if user.is_authenticated %}
-                <li class="hide-on-small-only"><a class="" href="{% url "upload" %}"><i class="material-icons right">trending_up</i>Upload</a></li>
-                <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">new_releases</i></a></li>
-                <li class="hide-on-small-only"><a href="mobile.html"><i class="material-icons">perm_identity</i></a></li>
+                <li class="hide-on-small-only"><a class="upload" href="{% url "channel" user.get_username 'upload' %}"><i class="material-icons right">trending_up</i>Upload</a></li>
+                <li class="hide-on-small-only"><a href="/"><i class="material-icons">new_releases</i></a></li>
+                <li class="hide-on-small-only"><a href="{% url "channel" user.get_username 'profile' %}"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
-                <li class="hide-on-small-only"><a class="modal-trigger" href="#login_modal">Login</a></li>
+                <li class="hide-on-small-only"><a class="modal-trigger" href="#login_modal"><i class="material-icons">perm_identity</i>Login</a></li>
               {% endif %}
             </ul>
           </div>
@@ -138,7 +138,7 @@
           {% if user.is_authenticated %}
             <figure class="sidebar-image">
                   <img src="{{ user.profile.profile_picture.url }}" alt="" class="circle responsive-img"/>
-                  <figcaption><a href="#" class="orange-text text-lighten-2 center-align">{{ user.get_username }}</a></figcaption>
+                  <figcaption><a href="{% url "channel" user.get_username 'profile' %}" class="orange-text text-lighten-2 center-align">{{ user.get_username }}</a></figcaption>
             </figure>
             <div class="row network">
                 <div class="col s3"><a class="white-text" href="{{ user.profile.twitter }}"><i class="fa fa-twitter fa-lg"></i></a></div>
@@ -146,13 +146,41 @@
                 <div class="col s3"><a class="white-text" href="{{ user.profile.instagram }}"><i class="fa fa-instagram fa-lg"></i></a></div>
                 <div class="col s3"><a class="white-text" href="{{ user.profile.google }}"><i class="fa fa-google-plus fa-lg"></i></a></div>
             </div>
-            <li><a href="{% url "index" %}" class="white-text">Home</a></li>
-            <li><a href="{% url "upload" %}" class="white-text">Upload</a></li>
-            <li><a href="#!" class="white-text">My videos</a></li>
-            <li><a href="#!" class="white-text">Favorites</a></li>
-            <li><a href="#!" class="white-text">Playlist</a></li>
-            <li><a href="#" class="white-text">Stream</a></li>
-            <li><a href="{% url "logout" %}" class="white-text">Logout</a></li>
+            <li>
+              <a href="{% url "index" %}" class="white-text">
+                <i class="material-icons">send</i> Home
+              </a>
+            </li>
+            <li>
+              <a href="{% url "channel" user.get_username 'upload' %}" class="green-text text-lighten-2">
+                <i class="material-icons">send</i> Upload
+              </a>
+            </li>
+            <li>
+              <a href="{% url "channel" user.get_username 'videos' %}" class="orange-text text-lighten-2">
+                <i class="material-icons">send</i> My videos
+              </a>
+            </li>
+            <li>
+              <a href="{% url "channel" user.get_username 'favs' %}" class="red-text text-lighten-2">
+                <i class="material-icons">send</i> Favorites
+              </a>
+            </li>
+            <li>
+              <a href="{% url "channel" user.get_username 'playlists' %}" class="blue-text text-lighten-2">
+                <i class="material-icons">send</i> Playlist
+              </a>
+            </li>
+            <li>
+              <a href="{% url "channel" user.get_username 'stream' %}" class="white-text">
+                <i class="material-icons">send</i> Stream
+              </a>
+            </li>
+            <li>
+              <a href="{% url "logout" %}" class="red-text text-lighten-2">
+                <i class="material-icons">send</i> Logout
+              </a>
+            </li>
           {% else %}
             <figure class="sidebar-image">
                   <img src="static/img/20.png" alt="" class="circle responsive-img"/>

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static from static %}
+
+{% block content %}
+<div class="col s12 m8 l5 offset-l3">
+	<div id="tab_active">{{ tab }}</div>
+	<div class="row orange lighten-2 section">	
+		<div class="col s12">
+	    	<img class="materialboxed" width="100%" src="{{ MEDIA_URL }}/images/covers/backgrund.png">
+		</div>
+		<div class="row">			
+			<div id="profile-picture" class="col s4">
+		    	<img class="materialboxed responsive-img circle" src="{{ profile.profile_picture.url }}" alt="">
+			</div>
+			<div class="col s8">
+				<h5 class="white-text">{{ user.get_username }}</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+			  <ul class="tabs grey darken-2">
+			    <li class="tab col s3"><a id="profile" href="#profile_tab">Profile</a></li>
+			    <li class="tab col s3"><a id="upload" href="#upload_tab">Upload</a></li>
+			    <li class="tab col s3"><a id="videos" href="#videos_tab">Videos</a></li>
+			    <li class="tab col s3"><a id="favs" href="#favs_tab">Favs</a></li>
+			  </ul>
+			</div>
+
+<!-- *************************************PROFILE SECTION************************************* -->
+			<section id="profile_tab" class="col s12">
+				<p>{{ user.get_full_name }}</p>
+				<p>{{ user.email }}</p>
+				<p>{{ user.date_joined }}</p>
+				<p>{{ profile.facebook }}</p>
+				<p>{{ profile.twitter }}</p>
+				<p>{{ profile.instagram }}</p>
+				<p>{{ profile.google }}</p>
+			</section>
+<!-- ***********************************END PROFILE SECTION*********************************** -->
+
+<!-- **************************************UPLOAD SECTION************************************* -->
+			<section id="upload_tab" class="col s12">
+			    <form id="upload_form" action="{% url "upload_video" %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input id="video_title" name="video_title" type="text" class="validate">
+			          <label for="first_name">Title</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input id="video_tags" name="video_tags" type="text" class="validate">
+			          <label for="last_name">Tags</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <textarea id="video_description" name="video_description" class="materialize-textarea"></textarea>
+			          <label for="textarea1">Description</label>
+			        </div>
+			      </div>
+			      <div class="row">      	
+				    <div class="col s9 file-field input-field">
+				      <div class="btn">
+				        <span>File</span>
+				        <input id="video_source" type="file" name="video">
+				      </div>
+				      <div class="file-path-wrapper">
+				        <input id="video_path" class="file-path validate" type="text">
+				      </div>
+				    </div>
+						 <button class="col s3 btn waves-effect waves-light" type="submit" name="action">Upload
+						    <i class="material-icons right">send</i>
+						 </button>
+			      </div>
+			    </form>
+			</section>
+<!-- ************************************END UPLOAD SECTION*********************************** -->
+
+<!-- **************************************VIDEOS SECTION************************************* -->
+			<section id="videos_tab" class="col s12">
+			<div class="orange lighten-2 section">		
+				{% for video in profile_videos %}
+					<div class="row">
+						<div class="col s12 m4">
+							<a href="{% url "video" video.slug %}" title="">					
+								<video height="auto" width="auto" class="responsive-video"preload="auto">
+									<source src="{{ video.generic_path }}.mp4" type='video/mp4'>
+									<source src="{{ video.generic_path }}.webm" type='video/webm'>
+									<source src="{{ video.generic_path }}.ogv" type='video/ogg'>
+								</video>
+							</a>
+						</div>
+						<div class="col s12 m8">
+							<div class="row">
+								<div class="col s12 m5">						
+									<a class="grey-text text-darken-2" href="{% url "video" video.slug %}" title=""><h5>{{ video.title }}</h5></a>
+									<p>Por {{ video.profile.user.get_username }}</p>
+									<p>Visitas {{ video.views }}</p>
+								</div>
+								<div class="col s12 m7">
+									<p>Tags: {{ video.tags }}</p>
+									<p>Description: {{ video.description }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			</section>
+<!-- ************************************END VIDEOS SECTION*********************************** -->
+
+<!-- ***************************************FAVS SECTION************************************** -->
+			<section id="favs_tab" class="col s12">
+				
+			</section>
+<!-- **************************************END FAVS SECTION************************************ -->
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static "js/channelScript.js" %}"></script>
+{% endblock %}

@@ -70,9 +70,6 @@ def search_view(request):
 	else:
 		return redirect(request.META.get('HTTP_REFERER'))
 
-@login_required(login_url='/')
-def upload_view(request):
-	return render(request, 'upload.html')
 
 @csrf_exempt
 def upload_video_view(request):
@@ -93,7 +90,7 @@ def upload_video_view(request):
         video.save()
 
         video_encode.delay(video.path.url)
-        return redirect('upload')
+        return redirect('video', video.slug)
         #return JsonResponse(dict({'video_path' : video_title}))
     else:
         return redirect(request.META.get('HTTP_REFERER'))
@@ -134,6 +131,11 @@ def video_view(request, video_slug):
 	context = {'video' : video, 'comments' : comments}
 	return render(request, 'video.html', context)
 
-@login_required
-def channel_view(request):
-	pass
+
+@login_required(login_url='/')
+def channel_view(request, username_slug, tab='profile'):
+	user = get_object_or_404(User, username=username_slug)
+	profile = get_object_or_404(Profile, user=user)
+	profile_videos = profile.videos.all()
+	context = { 'profile': profile, 'tab': tab, 'profile_videos': profile_videos }
+	return render(request, 'channel.html', context)
