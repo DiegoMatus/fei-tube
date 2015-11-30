@@ -15,6 +15,14 @@ footer{
 	color: #FFB74D;
 }
 
+.grade {
+	color: gray;
+}
+
+.grade:hover {
+	color: #ef5350;
+}
+
 
 #login_modal, #signup_modal {
 	border-radius: 3em;
@@ -27,6 +35,11 @@ footer{
 
 #tab_active {
 	display: none;
+}
+
+#float-button {
+	bottom: 45px;
+	right: 24px;
 }
 
 

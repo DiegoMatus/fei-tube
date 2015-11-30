@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from apps.feitube.models import Profile, Video, Comment
+from apps.feitube.models import Profile, Video, Comment, Rate
 from apps.feitube.tasks import video_encode
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
@@ -19,17 +19,15 @@ def index(request):
 
 @csrf_exempt
 def login_view(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        if user.is_active:
-            login(request, user)
-            return redirect(request.META.get('HTTP_REFERER'))
-        else:
-            pass
-    else:
-        return redirect('index')
+	if request.method == "POST":	
+	    username = request.POST['username']
+	    password = request.POST['password']
+	    user = authenticate(username=username, password=password)
+	    if user is not None:
+	        if user.is_active:
+	            login(request, user)
+	            return redirect(request.META.get('HTTP_REFERER'))
+	return redirect('index')
 
 @login_required(login_url='/')
 def logout_view(request):
@@ -83,7 +81,7 @@ def upload_video_view(request):
         video_path = request.FILES['video']
 
         video = Video(title=video_title, tags=video_tags, description=video_description,
-        			path=video_path, profile=video_profile, views=0)
+        			path=video_path, profile=video_profile, views=0, rates_count=0, rates_sum=0)
 
         video.save()
         video.generic_path = video.path.url.split('.')[-2]
@@ -123,12 +121,54 @@ def public_comment_view(request):
 		return redirect(request.META.get('HTTP_REFERER'))
 		
 
+@csrf_exempt
+def rate_view(request):
+	if request.method == "POST":
+		username = request.POST.get('username')
+		user = get_object_or_404(User, username=username)
+		rate_profile = Profile.objects.get(user=user)
+
+		video = request.POST.get('video')
+		rate_video = get_object_or_404(Video, slug=video)
+
+		score = request.POST.get('rate')
+
+		is_valored = False
+
+		rates = Rate.objects.filter(video=rate_video)
+		for rate in rates:
+			if rate.profile == rate_profile:
+				is_valored = True
+
+
+		if is_valored == False:
+			rate = Rate(video=rate_video, profile=rate_profile, score=score)
+			rate.save()
+
+			rate_video.rates_count += int(1)
+			rate_video.rates_sum += int(score)
+			rate_video.save()
+
+			rates_average = rate_video.rates_sum/rate_video.rates_count
+
+
+			data = { 'average': rates_average }
+		else:
+			data = { 'average': is_valored }
+
+		return JsonResponse(data)
+	else:
+		return redirect(request.META.get('HTTP_REFERER'))
+
+
 def video_view(request, video_slug):
 	video = get_object_or_404(Video, slug=video_slug)
 	video.views += 1
 	video.save()
+
 	comments = video.video_comments.all()
-	context = {'video' : video, 'comments' : comments}
+	rate_average = video.rates_sum/video.rates_count
+	context = {'video' : video, 'comments' : comments, 'rate_average': rate_average}
 	return render(request, 'video.html', context)
 
 
@@ -137,5 +177,7 @@ def channel_view(request, username_slug, tab='profile'):
 	user = get_object_or_404(User, username=username_slug)
 	profile = get_object_or_404(Profile, user=user)
 	profile_videos = profile.videos.all()
-	context = { 'profile': profile, 'tab': tab, 'profile_videos': profile_videos }
+	profile_video_rates = profile.profile_rates.all()
+	context = { 'profile': profile, 'tab': tab, 'profile_videos': profile_videos,
+				'video_rates': profile_video_rates }
 	return render(request, 'channel.html', context)

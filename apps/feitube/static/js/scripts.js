@@ -1,10 +1,33 @@
-var socket = io.connect('http://localhost:9998', { 'forceNew': true });
+var socket = io.connect('http://192.168.1.69:9998', { 'forceNew': true });
 
-socket.on('messages', function(data){
-	render(data);
+socket.on('comments', function(data){
+	renderComments(data);
 })
 
-function render(data){
+socket.on('rates', function(data){
+	if (data.average != true) {
+		renderRates(data);
+	}
+});
+
+socket.on('showToast', function(data){
+	if (data.average == true) {
+		Materialize.toast("You can't rate a video twice", 3000, 'rounded');
+	}else{
+		Materialize.toast('Thanks for rating', 3000, 'rounded');
+	};
+});
+
+socket.on('refreshCommentField', function(){
+	document.getElementById('comment_body').value = '';
+});
+
+function renderRates(data){
+	truncated_average = Math.floor(data.average * 10) / 10;
+	document.getElementById('rate_average').innerHTML = truncated_average;
+}
+
+function renderComments(data){
 	var html = `<img class="col s4 m2 responsive-img circle" src="${data.profile_picture}" alt="">
 				<div class="col s8 m10">
 					<div class="row">
@@ -25,8 +48,6 @@ function render(data){
 	}else{
 		alert(data.comment);
 	};
-		document.getElementById('comment_body').value = '';
-	//document.getElementById('messages').parentNode.appendChild(html);
 }
 
  		
@@ -36,9 +57,19 @@ $('#comment_form').on('submit', function(e){
 		video: document.getElementById('video-container').getAttribute('name'),
 		comment: document.getElementById('comment_body').value
 	};
-	socket.emit('new-message', data);
+	socket.emit('new-comment', data);
+	return false;	
+});
+
+
+$('.grade').on('click', function(e){
+	var data = {
+		username: document.getElementById('user_picture').getAttribute('alt'),
+		video: document.getElementById('video-container').getAttribute('name'),
+		rate: this.children[0].innerHTML
+	};
+	socket.emit('new-rate', data);
 	return false;
-	
 });
 
 
@@ -64,45 +95,3 @@ $('.button-collapse').sideNav({
 }(document,"script","twitter-wjs");
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-
-
-	/*$('#upload_form').on('submit', function(e){
-		e.preventDefault();
-		$.ajax({
-			url : '/upload/video',
-			type: 'POST',
-			data: {
-				video_title: $('#video_title').val(),
-				video_tags: $('#video_tags').val(),
-				video_description: $('#video_description').val(),
-				video_path: $('#video_source').val()
-			},
-			success : function(data){
-				alert("Tu video " + data.video_path + " se está subiendo");
-			},
-			error : function(error){
-				console.log(error);
-			}
-		});
-	});*/
-
-
-/*$('#search_form').on('submit', function(e){
-	e.preventDefault();
-	$.ajax({
-		url : '/upload/video',
-		type: 'POST',
-		data: {
-			video_title: $('#video_title').val(),
-			video_tags: $('#video_tags').val(),
-			video_description: $('#video_description').val(),
-			video_path: $('#video_source').val()
-		},
-		success : function(data){
-			alert("Tu video " + data.video_path + " se está subiendo");
-		},
-		error : function(error){
-			console.log(error);
-		}
-	});
-});*/

@@ -38,7 +38,7 @@
                 <li class="hide-on-small-only"><a href="/"><i class="material-icons">new_releases</i></a></li>
                 <li class="hide-on-small-only"><a href="{% url "channel" user.get_username 'profile' %}"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
-                <li class="hide-on-small-only"><a class="modal-trigger" href="#login_modal"><i class="material-icons">perm_identity</i>Login</a></li>
+                <li class=""><a class="modal-trigger" href="#login_modal"><i class="material-icons right">perm_identity</i>Login</a></li>
               {% endif %}
             </ul>
           </div>
@@ -121,11 +121,9 @@
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text">
           </div>
-        </div>
-        <div class="col s2 offset-s1">      
-          <button class="modal-action modal-close btn waves-effect waves-light" type="submit" >Register<i class="material-icons right">send</i>
-          </button>
-        </div>
+        </div>   
+        <button class="col s3 modal-action modal-close btn waves-effect waves-light" type="submit" >Register<i class="material-icons right">send</i>
+        </button>
       </div>
     </form>
   </div>
@@ -163,7 +161,7 @@
             </li>
             <li>
               <a href="{% url "channel" user.get_username 'favs' %}" class="red-text text-lighten-2">
-                <i class="material-icons">send</i> Favorites
+                <i class="material-icons">send</i> Scores
               </a>
             </li>
             <li>
@@ -217,7 +215,7 @@
             <li><a class="grey-text text-darken-2" href="#!">Home</a></li>
             <li><a class="grey-text text-darken-2" href="#!">Upload</a></li>
             <li><a class="grey-text text-darken-2" href="#!">My videos</a></li>
-            <li><a class="grey-text text-darken-2" href="#!">Favorites</a></li>
+            <li><a class="grey-text text-darken-2" href="#!">Scores</a></li>
             <li><a class="grey-text text-darken-2" href="#!">Playlist</a></li>
           </ul>
         </div>
@@ -234,7 +232,7 @@
     <!--Import jQuery before materialize.js-->
     <script src="{% static "js/jquery-2.1.1.min.js" %}" type="text/javascript"></script>
     <script src="{% static "js/materialize.min.js" %}" type="text/javascript"></script>
-    <script src="http://localhost:9998/socket.io/socket.io.js"></script>
+    <script src="http://192.168.1.69:9998/socket.io/socket.io.js"></script>
     <script src="{% static "js/scripts.js" %}" type="text/javascript"></script>
     {% block scripts %}{% endblock %}
   </body>

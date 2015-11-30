@@ -64,9 +64,11 @@ class Video(models.Model):
     generic_path = models.CharField('Ruta genérica', max_length=255)
     views = models.IntegerField ('Visitas', blank=True, null=True)
     uploaded = models.DateTimeField(auto_now_add=True)
-    favs_count = models.IntegerField ('Cantidad de favoritos', blank=True, null=True)
     profile = models.ForeignKey(Profile, verbose_name='Usuario', related_name='videos', blank=True, null=True)
+    favs_count = models.IntegerField ('Cantidad de favoritos', blank=True, null=True)
     favs = models.ManyToManyField(Profile, verbose_name='Favoritos', related_name='videos_fav', blank=True)
+    rates_count = models.IntegerField('Total de calificaciones', blank=True, null=True)
+    rates_sum = models.IntegerField('Suma total de calificaciones', blank=True, null=True)
     rates = models.ManyToManyField(Profile, verbose_name='Calificaciones', through="Rate", 
     						through_fields=('video', 'profile'), related_name='videos_rate')
     comments = models.ManyToManyField(Profile, verbose_name='Comentarios', through="Comment", 
@@ -90,8 +92,8 @@ class Video(models.Model):
 class Rate(models.Model):
 	'''Calificación otorgada por los usuarios a los videos. Un video es calificado por
 	varios usuarios, y un usuario puede calificar varios videos. Escala 1-5'''
-	video = models.ForeignKey(Video)
-	profile = models.ForeignKey(Profile)
+	video = models.ForeignKey(Video, related_name='video_rates')
+	profile = models.ForeignKey(Profile, related_name='profile_rates')
 	score = models.IntegerField('Puntuación')
 
 	class Meta:
@@ -99,14 +101,14 @@ class Rate(models.Model):
 		verbose_name_plural = 'Calificaciones'
 
 	def __str__(self):
-		return self.score
+		return str(self.score)
 
 
 #											COMMENT
 ##########################################################################################
 class Comment(models.Model):
     video = models.ForeignKey(Video, related_name='video_comments')
-    profile = models.ForeignKey(Profile)
+    profile = models.ForeignKey(Profile, related_name='profile_comments')
     comment = models.TextField('Comentario')
     published = models.DateTimeField(auto_now_add=True)
 
