@@ -1,1 +1,1 @@
-web: gunicorn proyecto.wsgi
+web: gunicorn fei_tube.wsgi
