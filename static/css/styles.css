@@ -7,28 +7,40 @@ footer{
 	margin: 1% 0;
 }
 
-
-/*.video_fields {
-	height: 10px;
+.tabs .tab a {
+	color: white;
 }
 
-#vid-box{
-	width: 100%;
-	height: 100%;
-	text-align: center;
+.tabs .tab a:hover {
+	color: #FFB74D;
 }
 
-#vid-box video{
-	width: 100%;
-	height: 100%;
+.grade {
+	color: gray;
 }
 
-#stream-info{
-	position: absolute;
-	bottom: 3vh;
-	right: 5vw;
-}*/
+.grade:hover {
+	color: #ef5350;
+}
 
+
+#login_modal, #signup_modal {
+	border-radius: 3em;
+}
+
+#profile-picture {
+	margin-top: -4em;
+	position: relative;
+}
+
+#tab_active {
+	display: none;
+}
+
+#float-button {
+	bottom: 45px;
+	right: 24px;
+}
 
 
 @media only screen and (max-width : 992px) {

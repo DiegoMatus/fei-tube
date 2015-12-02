@@ -9,6 +9,7 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" type="text/css" href="{% static "css/materialize.min.css" %}" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}" media="screen,projection"/>
+    <link rel="stylesheet" href="//releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -38,7 +39,7 @@
                 <li class="hide-on-small-only"><a href="/"><i class="material-icons">new_releases</i></a></li>
                 <li class="hide-on-small-only"><a href="{% url "channel" user.get_username 'profile' %}"><i class="material-icons">perm_identity</i></a></li>
               {% else %}
-                <li class=""><a class="modal-trigger" href="#login_modal"><i class="material-icons right">perm_identity</i>Login</a></li>
+                <li class="hide-on-small-only"><a class="modal-trigger" href="#login_modal"><i class="material-icons right">perm_identity</i>Login</a></li>
               {% endif %}
             </ul>
           </div>
@@ -54,14 +55,14 @@
         <div class="divider"></div>
     </div>
     <div class="row">
-      <form id="upload_form" class="col s12" action="{% url "login" %}" method="POST" >{% csrf_token %}
+      <form class="col s12" action="{% url "login" %}" method="POST" >{% csrf_token %}
         <div class="row">
           <div class="input-field col s6">
-            <input name="username" type="text" class="validate">
+            <input name="username" type="text" class="validate" required>
             <label for="Username">Username</label>
           </div>
           <div class="input-field col s6">
-            <input name="password" type="password" class="validate">
+            <input name="password" type="password" class="validate" required>
             <label for="password">Password</label>
           </div>
         </div>
@@ -84,31 +85,31 @@
     <form class="col s12" method="POST" action="{% url "signup" %}" enctype="multipart/form-data">{% csrf_token %}
       <div class="row">
         <div class="input-field col s12 m6">
-          <input id="first_name" name="first_name" type="text" class="validate">
+          <input id="first_name" name="first_name" type="text" class="validate formValidation" required>
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s12 m6">
-          <input id="last_name" name="last_name" type="text" class="validate">
+          <input id="last_name" name="last_name" type="text" class="validate formValidation" required>
           <label for="last_name">Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m6">
-          <input id="username" name="username" type="text" class="validate">
+          <input id="username" name="username" type="text" class="validate formValidation" required>
           <label for="disabled">Username</label>
         </div>
         <div class="input-field col s12 m6">
-          <input id="email" name="email" type="email" class="validate">
+          <input id="email" name="email" type="email" class="validate" required>
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m6">
-          <input id="password" name="password" type="password" class="validate">
+          <input id="password" name="password" type="password" class="validate" required>
           <label for="password">Password</label>
         </div>
         <div class="input-field col s12 m6">
-          <input id="password2" name="password2" type="password" class="validate">
+          <input id="password2" name="password2" type="password" class="validate" required>
           <label for="password2">Confirm Password</label>
         </div>
       </div>
@@ -135,7 +136,11 @@
         <div class="sidebar-header">
           {% if user.is_authenticated %}
             <figure class="sidebar-image">
-                  <img src="{{ user.profile.profile_picture.url }}" alt="" class="circle responsive-img"/>
+                {% if user.profile.profile_picture %}  
+                  <img src="{{ user.profile.profile_picture.url }}" alt="profile_image" class="circle responsive-img"/>
+                {% else %}
+                  <img src="{% static "img/20.png" %}" alt="profile_image" class="circle responsive-img"/>
+                {% endif %}
                   <figcaption><a href="{% url "channel" user.get_username 'profile' %}" class="orange-text text-lighten-2 center-align">{{ user.get_username }}</a></figcaption>
             </figure>
             <div class="row network">
@@ -194,7 +199,7 @@
       </ul>
     </aside>
 
-  <section class="main row section">        
+  <section class="main row section">       
     {% block content %}{% endblock %}
     <aside class="col s12 m4 l4">
       <a class="twitter-timeline"  href="https://twitter.com/hashtag/DevAplicacionesEnRed" data-widget-id="669795053980639232">#DevAplicacionesEnRed Tweets</a>
@@ -232,7 +237,8 @@
     <!--Import jQuery before materialize.js-->
     <script src="{% static "js/jquery-2.1.1.min.js" %}" type="text/javascript"></script>
     <script src="{% static "js/materialize.min.js" %}" type="text/javascript"></script>
-    <script src="http://192.168.1.69:9998/socket.io/socket.io.js"></script>
+    <script src="http://localhost:9998/socket.io/socket.io.js"></script>
+    <script src="//releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
     <script src="{% static "js/scripts.js" %}" type="text/javascript"></script>
     {% block scripts %}{% endblock %}
   </body>

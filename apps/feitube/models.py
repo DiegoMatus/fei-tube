@@ -107,6 +107,8 @@ class Rate(models.Model):
 #											COMMENT
 ##########################################################################################
 class Comment(models.Model):
+    '''Comentarios de los usuario sobre los videos. Un video puede ser comentado por
+    varios usuarios, y un usuario puede comentar varios videos.'''
     video = models.ForeignKey(Video, related_name='video_comments')
     profile = models.ForeignKey(Profile, related_name='profile_comments')
     comment = models.TextField('Comentario')

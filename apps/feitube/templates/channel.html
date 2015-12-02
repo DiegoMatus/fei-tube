@@ -10,7 +10,11 @@
 		</div>
 		<div class="row">			
 			<div id="profile-picture" class="col s4">
-		    	<img class="materialboxed responsive-img circle" src="{{ profile.profile_picture.url }}" alt="">
+              {% if user.profile.profile_picture %}
+                <img src="{{ user.profile.profile_picture.url }}" alt="profile_image" class="circle responsive-img materialboxed"/>
+              {% else %}
+                <img src="{% static "img/20.png" %}" alt="profile_image" class="circle responsive-img materialboxed"/>
+              {% endif %}
 			</div>
 			<div class="col s8">
 				<h5 class="white-text">{{ user.get_username }}</h5>
@@ -45,17 +49,17 @@
 			    <form id="upload_form" action="{% url "upload_video" %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
 			      <div class="row">
 			        <div class="input-field col s6">
-			          <input id="video_title" name="video_title" type="text" class="validate">
+			          <input id="video_title" name="video_title" type="text" class="validate formValidation" required>
 			          <label for="first_name">Title</label>
 			        </div>
 			        <div class="input-field col s6">
-			          <input id="video_tags" name="video_tags" type="text" class="validate">
+			          <input id="video_tags" name="video_tags" type="text" class="validate formValidation">
 			          <label for="last_name">Tags</label>
 			        </div>
 			      </div>
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <textarea id="video_description" name="video_description" class="materialize-textarea"></textarea>
+			          <textarea id="video_description" name="video_description" class="materialize-textarea formValidation"></textarea>
 			          <label for="textarea1">Description</label>
 			        </div>
 			      </div>
@@ -63,10 +67,10 @@
 				    <div class="col s9 file-field input-field">
 				      <div class="btn">
 				        <span>File</span>
-				        <input id="video_source" type="file" name="video">
+				        <input id="video_source" type="file" name="video" required>
 				      </div>
 				      <div class="file-path-wrapper">
-				        <input id="video_path" class="file-path validate" type="text">
+				        <input id="video_path" class="file-path validate" type="text" required>
 				      </div>
 				    </div>
 					<button class="col s3 btn waves-effect waves-light" type="submit" name="action">

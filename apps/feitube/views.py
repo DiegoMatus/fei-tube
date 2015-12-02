@@ -10,15 +10,22 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth.hashers import make_password
 
-# Create your views here.
+########################################VIEWS######################################
+
+#										INDEX VIEW
+##########################################################################################
 def index(request):
-    videos = Video.objects.all()
-    context = { 'videos': videos }
-    return render(request, 'index.html', context)
+	'''Home. Carga la lista de videos subidos'''
+	videos = Video.objects.all()
+	context = { 'videos': videos }
+	return render(request, 'index.html', context)
 
 
+#										LOGIN VIEW
+##########################################################################################
 @csrf_exempt
 def login_view(request):
+	'''Home. Carga la lista de videos subidos'''
 	if request.method == "POST":	
 	    username = request.POST['username']
 	    password = request.POST['password']
@@ -27,38 +34,54 @@ def login_view(request):
 	        if user.is_active:
 	            login(request, user)
 	            return redirect(request.META.get('HTTP_REFERER'))
-	return redirect('index')
+	    else:
+	    	return render(request, '500.html', {'error': "Usuario y/o contraseña incorrecta"})
+	return render(request, '500.html')
+		
 
+
+#										LOGOUT VIEW
+##########################################################################################
 @login_required(login_url='/')
 def logout_view(request):
 	logout(request)
 	return redirect('index')
+
 	
+#										SIGNUP VIEW
+##########################################################################################
 @csrf_exempt
 def signup_view(request):
 	if request.method == "POST":
-	    first_name = request.POST['first_name']
-	    last_name = request.POST['last_name']
-	    email = request.POST['email']
-	    username = request.POST['username']
-	    password = request.POST['password']
-	    confirm_password = request.POST['password2']
-	    profile_picture = request.FILES.get('profile_picture')
+		first_name = request.POST['first_name']
+		last_name = request.POST['last_name']
+		email = request.POST['email']
+		username = request.POST['username']
+		password = request.POST['password']
+		confirm_password = request.POST['password2']
+		profile_picture = request.FILES.get('profile_picture')
 
-	    if password == confirm_password:
-	    	password = make_password(password)
-	    	confirm_password = make_password(confirm_password)
+		try:
+			if password == confirm_password:
+				password = make_password(password)
+				confirm_password = make_password(confirm_password)
 
-	    	user = User(username=username, first_name=first_name, last_name=last_name, email=email,
-	    		password=password)
-	    	user.save()
+				user = User(username=username, first_name=first_name, last_name=last_name, email=email,
+					password=password)
+				user.save()
 
-	    	profile = Profile(user=user, profile_picture=profile_picture)
-	    	profile.save()
+				profile = Profile(user=user, profile_picture=profile_picture)
+				profile.save()
 
-	return redirect(request.META.get('HTTP_REFERER'))
-		
+				return redirect('index')
+			else:
+				return render(request, '500.html', {'error': "Las contraseñas no coinciden"})
+		except:
+			return render(request, '500.html', {'error': "El username ya existe"})
 
+
+#										SEARCH VIEW
+##########################################################################################
 def search_view(request):
 	if request.method == "POST":
 		query = request.POST['search']
@@ -69,31 +92,38 @@ def search_view(request):
 		return redirect(request.META.get('HTTP_REFERER'))
 
 
+	
+#										UPLOAD VIDEO VIEW
+##########################################################################################
 @csrf_exempt
 def upload_video_view(request):
-    if request.method == 'POST':
-        user = request.user
-        video_profile = Profile.objects.get(user=user)
+	if request.method == 'POST':
+		try:
+			user = request.user
+			video_profile = Profile.objects.get(user=user)
 
-        video_title = request.POST.get("video_title")
-        video_tags = request.POST.get("video_tags")
-        video_description = request.POST.get("video_description")
-        video_path = request.FILES['video']
+			video_title = request.POST.get("video_title")
+			video_tags = request.POST.get("video_tags")
+			video_description = request.POST.get("video_description")
+			video_path = request.FILES['video']
 
-        video = Video(title=video_title, tags=video_tags, description=video_description,
-        			path=video_path, profile=video_profile, views=0, rates_count=0, rates_sum=0)
+			video = Video(title=video_title, tags=video_tags, description=video_description,
+	        			path=video_path, profile=video_profile, views=0, rates_count=0, rates_sum=0)
 
-        video.save()
-        video.generic_path = video.path.url.split('.')[-2]
-        video.save()
+			video.save()
+			video.generic_path = video.path.url.split('.')[-2]
+			video.save()
+			video_encode.delay(video.path.url)
+			return redirect('video', video.slug)
+		except:
+			return render(request, '500.html', {'error': "El nombre del video ya existe"})
+	else:
+		return render(request, '500.html')
 
-        video_encode.delay(video.path.url)
-        return redirect('video', video.slug)
-        #return JsonResponse(dict({'video_path' : video_title}))
-    else:
-        return redirect(request.META.get('HTTP_REFERER'))
 
-
+	
+#										PUBLIC COMMENT VIEW
+##########################################################################################
 @csrf_exempt
 def public_comment_view(request):
 	if request.method == 'POST':
@@ -108,19 +138,27 @@ def public_comment_view(request):
 
 		new_comment = Comment(video=comment_video, profile=comment_profile, comment=comment)
 		new_comment.save()
+
+		if comment_profile.profile_picture:
+			profile_picture = comment_profile.profile_picture.url
+		else:
+			profile_picture = '/static/img/20.png' #Default Profile picture
 		
 		data = {
 			'username': username,
 			'video': video,
 			'comment': comment,
 			'published': new_comment.published,
-			'profile_picture': comment_profile.profile_picture.url
+			'profile_picture': profile_picture
 		}
 		return JsonResponse(data)
 	else:
 		return redirect(request.META.get('HTTP_REFERER'))
 		
 
+	
+#										RATE VIEW
+##########################################################################################
 @csrf_exempt
 def rate_view(request):
 	if request.method == "POST":
@@ -161,17 +199,26 @@ def rate_view(request):
 		return redirect(request.META.get('HTTP_REFERER'))
 
 
+	
+#										VIDEO VIEW
+##########################################################################################
 def video_view(request, video_slug):
 	video = get_object_or_404(Video, slug=video_slug)
 	video.views += 1
 	video.save()
 
 	comments = video.video_comments.all()
-	rate_average = video.rates_sum/video.rates_count
+	if video.rates_sum != 0:
+		rate_average = video.rates_sum/video.rates_count
+	else:
+		rate_average = 0
 	context = {'video' : video, 'comments' : comments, 'rate_average': rate_average}
 	return render(request, 'video.html', context)
 
 
+	
+#										CHANNEL VIEW
+##########################################################################################
 @login_required(login_url='/')
 def channel_view(request, username_slug, tab='profile'):
 	user = get_object_or_404(User, username=username_slug)

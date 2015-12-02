@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 {% load static from static %}
-{% load social_share %}
-
-{% block style %}
-	<link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
-{% endblock %}
 
 {% block content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=615732791843545";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	{% if user.is_authenticated %}
 	<div id="float-button" class="fixed-action-btn horizontal click-to-toggle">
 		<a class="btn-floating btn-large red">
 			<i class="fa fa-share-alt"></i>
 		</a>
 		<ul>
+			<li><div class="fb-share-button" data-href="http://192.168.1.69:8000/watch/{{ video.slug }}/" data-layout="icon"></div></li>
 			<li><a class="btn-floating blue accent-3"><i class="fa fa-facebook"></i></a></li>
 			<li><a class="btn-floating grey"><i class="fa fa-instagram"></i></a></li>
 			<li><a class="btn-floating red"><i class="fa fa-google"></i></a></li>
@@ -22,23 +26,22 @@
 	{% endif %}
 
 	<div class="col s12 m7 offset-m1 l5 offset-l3">
-		<div id="video-container" name="{{ video.slug }}" class="row">
-			<video id="my-video" height="320px" width="auto" class="col s12  video-js responsive-video" controls preload="auto" data-setup="{}">
+		<div id="video-container" name="{{ video.slug }}" class="flowplayer row">
+			<video id="my-video" height="320px" width="auto" class="col s12" preload="auto">
 				<source src="{{ video.generic_path }}.mp4" type='video/mp4'>
 				<source src="{{ video.generic_path }}.webm" type='video/webm'>
 				<source src="{{ video.generic_path }}.ogv" type='video/ogg'>
-				<p class="vjs-no-js">
-				  Activa Javascript y/o considera actualizar a un navegador que
-				  <a href="http://videojs.com/html5-video-support/" target="_blank">soporte
-				  video de HTML5</a>
-				</p>
 			</video>
 		</div>
 		<div class="row orange lighten-2">
 			<h5 class="col s12 grey-text text-darken-4">{{ video.title }}</h5>
 			<div class="col s12">
 				<div class="row grey-text text-lighten-4">
-					<img class="col s4 m2" src="{{ video.profile.profile_picture.url }}" alt="">
+              		{% if user.profile.profile_picture %}
+						<img class="col s4 m2" src="{{ video.profile.profile_picture.url }}" alt="">
+              		{% else %}
+						<img class="col s4 m2" src="{% static "img/20.png" %}" alt="">
+              		{% endif %}  	
 					<div class="col s8 m10">
 						<div class="row">
 							<p class="col s6">Por <a class="grey-text text-darken-2" href="{% url "index" %}" id="profile">{{ video.profile.user.get_username }}</a></p>
@@ -52,12 +55,12 @@
 							<div class="col s6 l4">
 								<p>{{ video.uploaded|date:"d M Y" }}</p>
 							</div>
-							<div class="col s6 l4">
+							<div class="col s6 l3">
 								<p id="rate_average" class="red-text">Score: {{ rate_average|floatformat }}</p>
 							</div>
-							<div class="col s12 l4">	
+							<div class="col s8 m5">	
 							{% if user.is_authenticated %}
-								<div class="row">								
+								<div class="row">
 									<a id="one" class="grade col s1" href="{% url "rate" %}"><span>1</span><i class="material-icons">grade</i></a>
 									<a id="two" class="grade col s1" href="{% url "rate" %}"><span>2</span><i class="material-icons">grade</i></a>
 									<a id="three" class="grade col s1" href="{% url "rate" %}"><span>3</span><i class="material-icons">grade</i></a>
@@ -65,6 +68,9 @@
 									<a id="five" class="grade col s1" href="{% url "rate" %}"><span>5</span><i class="material-icons">grade</i></a>
 								</div>
 							{% endif %}
+							</div>
+							<div class="col s4 m2">
+								<a id="embed_code" class="btn" >Embed</a>
 							</div>
 						</div>
 					</div>
@@ -82,9 +88,13 @@
 		    <form id="comment_form" class="col s12" method="POST">{% csrf_token %}
 				<div class="row"> 
 					{% if user.is_authenticated %}
-						<img id="user_picture" class="col s2 responsive-img circle" src="{{ user.profile.profile_picture.url }}" alt="{{ user.get_username }}">   	
+              		{% if user.profile.profile_picture %}
+						<img id="user_picture" class="col s2 responsive-img circle" src="{{ user.profile.profile_picture.url }}" alt="{{ user.get_username }}"> 
+              		{% else %}
+						<img id="user_picture" class="col s2 responsive-img circle" src="{% static "img/20.png" %}" alt="{{ user.get_username }}">
+              		{% endif %}  	
 						<div class="input-field col s10">
-						  <textarea id="comment_body" name="comment_body" class="materialize-textarea"></textarea>
+						  <textarea required id="comment_body" name="comment_body" class="validate materialize-textarea formValidation"></textarea>
 						  <label for="textarea1">Comment</label>
 						</div>
 						<div class="row right">
@@ -109,8 +119,12 @@
 			<ul id="messages" class="col s12">
 			{% for comment in comments %}
 				<div class="divider"></div>
-				<li class="row section">					
-					<img class="col s4 m2 responsive-img circle" src="{{ comment.profile.profile_picture.url }}" alt="">
+				<li class="row section">	
+				{% if comment.profile.profile_picture %}				
+					<img class="col s4 m2 responsive-img circle" src="{{ comment.profile.profile_picture.url }}" alt="picture">
+				{% else %}
+					<img class="col s4 m2 responsive-img circle" src="{% static "img/20.png" %}" alt="picture">
+				{% endif %}
 					<div class="col s8 m10">
 						<div class="row">
 							<p class="col s12 m4">{{ comment.profile.user.get_username }}</p>
@@ -125,8 +139,4 @@
 			</ul>
 		</div>
 	</div>
-{% endblock %}
-
-{% block scripts %}
-	<script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
 {% endblock %}
