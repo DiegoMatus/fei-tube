@@ -5,4 +5,3 @@ media
 *.pyc, 
 __pycache__ 
 local_settings.py
-videos
