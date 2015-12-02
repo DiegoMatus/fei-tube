@@ -127,3 +127,8 @@ CELERY_RESULT_SERIALIZER = 'json'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
